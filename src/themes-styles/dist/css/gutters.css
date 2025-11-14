@@ -1,17 +1,20 @@
-@media (max-width: 768px) {
-  .row-md-0 {
-    margin-right: 0;
-    margin-left: 0;
-  }
+/* Error: $color: theme-color("primary") is not a color.
+ *     ,
+ * 178 | $link-hover-color:                        darken($link-color, 15%) !default;
+ *     |                                           ^^^^^^^^^^^^^^^^^^^^^^^^
+ *     '
+ *   /Users/thrubus/VigihDev/NpmPackage/bootstrap4-bundle/node_modules/bootstrap/scss/_variables.scss 178:43  @import
+ *   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/parent-themes-styles/_index.scss 1:9                @import
+ *   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/themes-styles/assets/assets.scss 2:9                @import
+ *   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/themes-styles/gutters/src/scss/gutters.scss 1:9     root stylesheet */
 
-  .container-fluid-md-0,
-.col-md-0,
-.container-md-0 {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .container-md-full {
-    max-width: 768px;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: $color: theme-color("primary") is not a color.\a     \2577 \a 178 \2502  $link-hover-color:                        darken($link-color, 15%) !default;\a     \2502                                            ^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   /Users/thrubus/VigihDev/NpmPackage/bootstrap4-bundle/node_modules/bootstrap/scss/_variables.scss 178:43  @import\a   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/parent-themes-styles/_index.scss 1:9                @import\a   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/themes-styles/assets/assets.scss 2:9                @import\a   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/themes-styles/gutters/src/scss/gutters.scss 1:9     root stylesheet';
 }

@@ -5,7 +5,7 @@ const { Paths } = require('./paths')
 class ParentThemesBundle {
 
     constructor() {
-        this.parent_file = path.join(Paths.parent_themes_styles, 'index.scss')
+        this.parent_file = path.join(Paths.parent_themes_styles, '_index.scss')
     }
 
     add(...path_parent_sass) {

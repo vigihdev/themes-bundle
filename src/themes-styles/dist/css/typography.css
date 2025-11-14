@@ -1,113 +1,20 @@
-html {
-  font-size: 16px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
+/* Error: $color: theme-color("primary") is not a color.
+ *     ,
+ * 178 | $link-hover-color:                        darken($link-color, 15%) !default;
+ *     |                                           ^^^^^^^^^^^^^^^^^^^^^^^^
+ *     '
+ *   /Users/thrubus/VigihDev/NpmPackage/bootstrap4-bundle/node_modules/bootstrap/scss/_variables.scss 178:43     @import
+ *   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/parent-themes-styles/_index.scss 1:9                   @import
+ *   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/themes-styles/assets/assets.scss 2:9                   @import
+ *   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/themes-styles/typography/src/scss/typography.scss 1:9  root stylesheet */
 
-body a,
-body a:hover,
-body li,
-body ul {
-  list-style: none;
-  text-decoration: none;
-}
-
-body ol,
-body ul {
-  margin: 0;
-  padding: 0;
-}
-
-body a {
-  outline: 0;
-  color: #ffa633;
-}
-body a:hover {
-  color: #ffce0a;
-}
-
-body {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 400;
-  color: #333;
-  background: #f4f4f4;
-  font-size: 1em;
-}
-body label,
-body .page-title,
-body .text-label,
-body .header-title {
-  font-weight: 600;
-}
-
-.img-md {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
-}
-
-.input-group-text .material-icons {
-  color: #000;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-.lead,
-p.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  margin-bottom: 0;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-h1,
-.h1 {
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-h2,
-.h2 {
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-h3,
-.h3 {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-h4,
-.h4 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-}
-
-h5,
-.h5 {
-  font-size: 0.8125rem;
-  font-weight: 400;
-}
-
-h6,
-.h6 {
-  font-size: 0.8125rem;
-  font-weight: 400;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: $color: theme-color("primary") is not a color.\a     \2577 \a 178 \2502  $link-hover-color:                        darken($link-color, 15%) !default;\a     \2502                                            ^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   /Users/thrubus/VigihDev/NpmPackage/bootstrap4-bundle/node_modules/bootstrap/scss/_variables.scss 178:43     @import\a   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/parent-themes-styles/_index.scss 1:9                   @import\a   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/themes-styles/assets/assets.scss 2:9                   @import\a   /Users/thrubus/VigihDev/NpmPackage/themes-bundle/src/themes-styles/typography/src/scss/typography.scss 1:9  root stylesheet';
 }

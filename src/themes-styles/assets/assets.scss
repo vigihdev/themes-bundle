@@ -1,7 +1,5 @@
 // bootstrap
-@import "../../../../bootstrap4-bundle/node_modules/bootstrap/scss/mixins";
-@import "../../../../bootstrap4-bundle/node_modules/bootstrap/scss/functions";
-@import "../../../../bootstrap4-bundle/node_modules/bootstrap/scss/variables";
+@import "../../parent-themes-styles/index";
 
 // Local
 @import "../elevation/src/scss/variables";
