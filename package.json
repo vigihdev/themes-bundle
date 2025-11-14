@@ -38,6 +38,7 @@
         "grunt:styles:clean": "npm run grunt -- themes_styles:clean",
         "grunt:styles:fresh": "npm run grunt -- themes_styles:fresh",
         "grunt:styles:build": "npm run grunt -- themes_styles:build",
+        "grunt:styles:watch": "npm run grunt -- themes_styles:watch",
         "grunt:components": "npm run grunt -- themes_components",
         "grunt:components:dist": "npm run grunt -- themes_components:dist",
         "grunt:components:clean": "npm run grunt -- themes_components:clean",
@@ -45,6 +46,7 @@
         "grunt:themes-bs": "npm run grunt -- themes_bootstrap",
         "grunt:themes-bs:dist": "npm run grunt -- themes_bootstrap:dist",
         "grunt:themes-bs:build": "npm run grunt -- themes_bootstrap:build",
+        "grunt:themes-bs:watch": "npm run grunt -- themes_bootstrap:watch",
         "grunt:themes-bs:clean": "npm run grunt -- themes_bootstrap:clean"
     }
 }

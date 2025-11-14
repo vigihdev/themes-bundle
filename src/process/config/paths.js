@@ -10,4 +10,5 @@ module.exports.Paths = {
     themes_bootstrap: path.join(BASEPATH, 'src', 'themes-bootstrap'),
     themes_components: path.join(BASEPATH, 'src', 'themes-components'),
     themes_styles: path.join(BASEPATH, 'src', 'themes-styles'),
+    parent_themes_styles: path.join(BASEPATH, 'src', 'parent-themes-styles'),
 }

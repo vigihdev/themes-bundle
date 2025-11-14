@@ -59,4 +59,22 @@ module.exports.ThemesStylesGrunt = function (grunt) {
         grunt.task.run(`${COMMAND}:build`);
     });
 
+    grunt.task.registerTask(`${COMMAND}:watch`, 'watch themes styles grunt', function () {
+
+        const watch = ThemesStyleSass.watch;
+        const args = grunt?.task?.current?.args ?? [];
+        const initConfig = {
+            watch: {
+                css: {
+                    files: watch.css,
+                    tasks: [`${COMMAND}:dist`]
+                }
+            },
+        }
+
+        grunt.initConfig(initConfig)
+        grunt.task.run(['watch'])
+
+    });
+
 };

@@ -42,3 +42,43 @@ concat_css
   "grunt:themes-bs:clean": "./src/process/scripts/themes-bundle-grunt.js themes_bootstrap:clean"
 }
 ```
+
+```js
+const path = require("node:path");
+const fs = require("node:fs");
+const { cwd, env } = require("node:process");
+const { ThemesBundle } = require("./index");
+const {
+  ThemesGrunt,
+  ThemesStylesGrunt,
+  ThemesComponentsGrunt,
+} = require("./src/process/grunt");
+
+console.log(`Server From ${__dirname}\n`);
+
+console.log(
+  [ThemesBundle.Paths.themes, ThemesBundle.Paths.themes_components].join("\n")
+);
+
+console.log(ThemesBundle.ThemesBootstrapSass.sass.dist.files);
+
+console.log(
+  [
+    ThemesBundle.ThemesSass.paths.BUILDS.CSS,
+    ThemesBundle.ThemesSass.paths.BUILDS.JS,
+  ].join("\n")
+);
+
+console.log(
+  typeof ThemesStylesGrunt === "function",
+  typeof ThemesGrunt === "function",
+  typeof ThemesComponentsGrunt === "function"
+);
+
+console.log(
+  [
+    ThemesBundle.ThemesBootstrapSass.basepath,
+    ThemesBundle.ThemesBootstrapSass.watch.js,
+  ].join("\n")
+);
+```

@@ -141,41 +141,41 @@
 }
 
 .radio-item.radio-item-primary .radio-item-container:hover, .radio-item.radio-item-primary .radio-item-container:focus, .radio-item.radio-item-primary .radio-item-container:active {
-  background-color: rgba(185, 0, 0, 0.1);
+  background-color: rgba(0, 123, 255, 0.1);
 }
 .radio-item.radio-item-primary.checked .radio-item-container {
-  color: rgba(185, 0, 0, 0.7);
+  color: rgba(0, 123, 255, 0.7);
 }
 .radio-item.radio-item-primary.checked .radio-item-container .radio-item-thumb svg.radio-item-checked-icon {
   -ms-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
-  color: #b90000;
+  color: #007bff;
 }
 .radio-item.radio-item-primary.checked label {
-  color: #b90000;
+  color: #007bff;
 }
 .radio-item.radio-item-primary.hover .radio-item-container, .radio-item.radio-item-primary.active .radio-item-container {
-  background-color: rgba(185, 0, 0, 0.1);
+  background-color: rgba(0, 123, 255, 0.1);
 }
 
 .radio-item.radio-item-secondary .radio-item-container:hover, .radio-item.radio-item-secondary .radio-item-container:focus, .radio-item.radio-item-secondary .radio-item-container:active {
-  background-color: rgba(255, 206, 10, 0.1);
+  background-color: rgba(108, 117, 125, 0.1);
 }
 .radio-item.radio-item-secondary.checked .radio-item-container {
-  color: rgba(255, 206, 10, 0.7);
+  color: rgba(108, 117, 125, 0.7);
 }
 .radio-item.radio-item-secondary.checked .radio-item-container .radio-item-thumb svg.radio-item-checked-icon {
   -ms-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
-  color: #ffce0a;
+  color: #6c757d;
 }
 .radio-item.radio-item-secondary.checked label {
-  color: #ffce0a;
+  color: #6c757d;
 }
 .radio-item.radio-item-secondary.hover .radio-item-container, .radio-item.radio-item-secondary.active .radio-item-container {
-  background-color: rgba(255, 206, 10, 0.1);
+  background-color: rgba(108, 117, 125, 0.1);
 }
 
 .radio-item.radio-item-success .radio-item-container:hover, .radio-item.radio-item-success .radio-item-container:focus, .radio-item.radio-item-success .radio-item-container:active {

@@ -107,35 +107,35 @@
 }
 
 .checkbox-outline.checkbox-outline-primary .checkbox-outline-container:hover, .checkbox-outline.checkbox-outline-primary .checkbox-outline-container:focus, .checkbox-outline.checkbox-outline-primary .checkbox-outline-container:active {
-  background-color: rgba(185, 0, 0, 0.2);
+  background-color: rgba(0, 123, 255, 0.2);
 }
 .checkbox-outline.checkbox-outline-primary.checked svg.checkbox-icon.checkbox-outline-checked-icon, .checkbox-outline.checkbox-outline-primary.checked svg.checkbox-icon.checkbox-outline-unchecked-icon {
   -moz-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
-  color: #b90000;
+  color: #007bff;
 }
 .checkbox-outline.checkbox-outline-primary.checked label {
-  color: #b90000;
+  color: #007bff;
 }
 .checkbox-outline.checkbox-outline-primary.checkbox-outline-ripple .checkbox-outline-container {
-  background-color: rgba(185, 0, 0, 0.1);
+  background-color: rgba(0, 123, 255, 0.1);
 }
 
 .checkbox-outline.checkbox-outline-secondary .checkbox-outline-container:hover, .checkbox-outline.checkbox-outline-secondary .checkbox-outline-container:focus, .checkbox-outline.checkbox-outline-secondary .checkbox-outline-container:active {
-  background-color: rgba(255, 206, 10, 0.2);
+  background-color: rgba(108, 117, 125, 0.2);
 }
 .checkbox-outline.checkbox-outline-secondary.checked svg.checkbox-icon.checkbox-outline-checked-icon, .checkbox-outline.checkbox-outline-secondary.checked svg.checkbox-icon.checkbox-outline-unchecked-icon {
   -moz-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
-  color: #ffce0a;
+  color: #6c757d;
 }
 .checkbox-outline.checkbox-outline-secondary.checked label {
-  color: #ffce0a;
+  color: #6c757d;
 }
 .checkbox-outline.checkbox-outline-secondary.checkbox-outline-ripple .checkbox-outline-container {
-  background-color: rgba(255, 206, 10, 0.1);
+  background-color: rgba(108, 117, 125, 0.1);
 }
 
 .checkbox-outline.checkbox-outline-success .checkbox-outline-container:hover, .checkbox-outline.checkbox-outline-success .checkbox-outline-container:focus, .checkbox-outline.checkbox-outline-success .checkbox-outline-container:active {
@@ -327,7 +327,7 @@
 }
 
 .checkbox-circle.checkbox-circle-primary .checkbox-circle-container:hover, .checkbox-circle.checkbox-circle-primary .checkbox-circle-container:focus, .checkbox-circle.checkbox-circle-primary .checkbox-circle-container:active {
-  background-color: rgba(185, 0, 0, 0.2);
+  background-color: rgba(0, 123, 255, 0.2);
 }
 .checkbox-circle.checkbox-circle-primary svg.radio-svg-icon.checkbox-primary-checked-icon {
   -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
@@ -349,21 +349,21 @@
   -moz-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
-  color: #b90000;
-  fill: #b90000;
+  color: #007bff;
+  fill: #007bff;
 }
 .checkbox-circle.checkbox-circle-primary.checked svg.radio-svg-icon.checkbox-primary-unchecked-icon {
-  fill: #b90000;
+  fill: #007bff;
 }
 .checkbox-circle.checkbox-circle-primary.checked label {
-  color: #b90000;
+  color: #007bff;
 }
 .checkbox-circle.checkbox-circle-primary.checkbox-circle-ripple .checkbox-circle-container {
-  background-color: rgba(185, 0, 0, 0.1);
+  background-color: rgba(0, 123, 255, 0.1);
 }
 
 .checkbox-circle.checkbox-circle-secondary .checkbox-circle-container:hover, .checkbox-circle.checkbox-circle-secondary .checkbox-circle-container:focus, .checkbox-circle.checkbox-circle-secondary .checkbox-circle-container:active {
-  background-color: rgba(255, 206, 10, 0.2);
+  background-color: rgba(108, 117, 125, 0.2);
 }
 .checkbox-circle.checkbox-circle-secondary svg.radio-svg-icon.checkbox-secondary-checked-icon {
   -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
@@ -385,17 +385,17 @@
   -moz-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
-  color: #ffce0a;
-  fill: #ffce0a;
+  color: #6c757d;
+  fill: #6c757d;
 }
 .checkbox-circle.checkbox-circle-secondary.checked svg.radio-svg-icon.checkbox-secondary-unchecked-icon {
-  fill: #ffce0a;
+  fill: #6c757d;
 }
 .checkbox-circle.checkbox-circle-secondary.checked label {
-  color: #ffce0a;
+  color: #6c757d;
 }
 .checkbox-circle.checkbox-circle-secondary.checkbox-circle-ripple .checkbox-circle-container {
-  background-color: rgba(255, 206, 10, 0.1);
+  background-color: rgba(108, 117, 125, 0.1);
 }
 
 .checkbox-circle.checkbox-circle-success .checkbox-circle-container:hover, .checkbox-circle.checkbox-circle-success .checkbox-circle-container:focus, .checkbox-circle.checkbox-circle-success .checkbox-circle-container:active {
@@ -732,29 +732,29 @@
 }
 
 .checkbox-switch.checkbox-switch-primary.checked .checkbox-switch-track {
-  background-color: #b90000;
+  background-color: #007bff;
 }
 .checkbox-switch.checkbox-switch-primary.checked .checkbox-switch-container .switch-thumb {
-  background-color: #b90000;
+  background-color: #007bff;
 }
 .checkbox-switch.checkbox-switch-primary.switch-ripple .checkbox-switch-container .switch-thumb-ripple {
-  background: rgba(185, 0, 0, 0.2);
+  background: rgba(0, 123, 255, 0.2);
 }
 .checkbox-switch.checkbox-switch-primary:hover .switch-thumb, .checkbox-switch.checkbox-switch-primary:focus .switch-thumb, .checkbox-switch.checkbox-switch-primary:active .switch-thumb {
-  box-shadow: rgba(185, 0, 0, 0.2) 0px 0px 0px 8px;
+  box-shadow: rgba(0, 123, 255, 0.2) 0px 0px 0px 8px;
 }
 
 .checkbox-switch.checkbox-switch-secondary.checked .checkbox-switch-track {
-  background-color: #ffce0a;
+  background-color: #6c757d;
 }
 .checkbox-switch.checkbox-switch-secondary.checked .checkbox-switch-container .switch-thumb {
-  background-color: #ffce0a;
+  background-color: #6c757d;
 }
 .checkbox-switch.checkbox-switch-secondary.switch-ripple .checkbox-switch-container .switch-thumb-ripple {
-  background: rgba(255, 206, 10, 0.2);
+  background: rgba(108, 117, 125, 0.2);
 }
 .checkbox-switch.checkbox-switch-secondary:hover .switch-thumb, .checkbox-switch.checkbox-switch-secondary:focus .switch-thumb, .checkbox-switch.checkbox-switch-secondary:active .switch-thumb {
-  box-shadow: rgba(255, 206, 10, 0.2) 0px 0px 0px 8px;
+  box-shadow: rgba(108, 117, 125, 0.2) 0px 0px 0px 8px;
 }
 
 .checkbox-switch.checkbox-switch-success.checked .checkbox-switch-track {
@@ -1111,27 +1111,27 @@ textarea.form-control {
 .textfield-primary.textfield-outline.textfield-floating-label.textfield-floating-label-active .textfield-outline-left,
 .textfield-primary.textfield-outline.textfield-floating-label.textfield-floating-label-active .textfield-outline-middle,
 .textfield-primary.textfield-outline.textfield-floating-label.textfield-floating-label-active .textfield-outline-right {
-  border-top: 2px solid #b90000;
-  border-bottom: 2px solid #b90000;
+  border-top: 2px solid #007bff;
+  border-bottom: 2px solid #007bff;
 }
 .textfield-primary.textfield-outline.textfield-floating-label.textfield-floating-label-active .textfield-outline-left {
-  border-left: 2px solid #b90000;
+  border-left: 2px solid #007bff;
 }
 .textfield-primary.textfield-outline.textfield-floating-label.textfield-floating-label-active .textfield-outline-right {
-  border-right: 2px solid #b90000;
+  border-right: 2px solid #007bff;
 }
 
 .textfield-secondary.textfield-outline.textfield-floating-label.textfield-floating-label-active .textfield-outline-left,
 .textfield-secondary.textfield-outline.textfield-floating-label.textfield-floating-label-active .textfield-outline-middle,
 .textfield-secondary.textfield-outline.textfield-floating-label.textfield-floating-label-active .textfield-outline-right {
-  border-top: 2px solid #ffce0a;
-  border-bottom: 2px solid #ffce0a;
+  border-top: 2px solid #6c757d;
+  border-bottom: 2px solid #6c757d;
 }
 .textfield-secondary.textfield-outline.textfield-floating-label.textfield-floating-label-active .textfield-outline-left {
-  border-left: 2px solid #ffce0a;
+  border-left: 2px solid #6c757d;
 }
 .textfield-secondary.textfield-outline.textfield-floating-label.textfield-floating-label-active .textfield-outline-right {
-  border-right: 2px solid #ffce0a;
+  border-right: 2px solid #6c757d;
 }
 
 .textfield-success.textfield-outline.textfield-floating-label.textfield-floating-label-active .textfield-outline-left,
@@ -1427,18 +1427,18 @@ input[type=number] {
 }
 
 .form-group.form-group-rounded.form-group.form-group-rounded-primary.textfield-rounded-active .input-group.input-group-rounded .input-group-prepend .input-group-text {
-  border-color: #b90000;
+  border-color: #007bff;
 }
 .form-group.form-group-rounded.form-group.form-group-rounded-primary.textfield-rounded-active .input-group.input-group-rounded .form-control {
-  border-color: #b90000;
+  border-color: #007bff;
   border-left: none;
 }
 
 .form-group.form-group-rounded.form-group.form-group-rounded-secondary.textfield-rounded-active .input-group.input-group-rounded .input-group-prepend .input-group-text {
-  border-color: #ffce0a;
+  border-color: #6c757d;
 }
 .form-group.form-group-rounded.form-group.form-group-rounded-secondary.textfield-rounded-active .input-group.input-group-rounded .form-control {
-  border-color: #ffce0a;
+  border-color: #6c757d;
   border-left: none;
 }
 
@@ -1570,14 +1570,14 @@ input[type=number] {
 }
 
 .loader-circle-primary {
-  border-color: #b90000;
+  border-color: #007bff;
   border-bottom-color: #fff;
   border-bottom-color: #ffce0a;
 }
 
 .loader-circle-secondary {
-  border-color: #ffce0a;
-  border-bottom-color: #212529;
+  border-color: #6c757d;
+  border-bottom-color: #fff;
   border-bottom-color: #b90000;
 }
 
@@ -1753,41 +1753,41 @@ input[type=number] {
 }
 
 .radio-item.radio-item-primary .radio-item-container:hover, .radio-item.radio-item-primary .radio-item-container:focus, .radio-item.radio-item-primary .radio-item-container:active {
-  background-color: rgba(185, 0, 0, 0.1);
+  background-color: rgba(0, 123, 255, 0.1);
 }
 .radio-item.radio-item-primary.checked .radio-item-container {
-  color: rgba(185, 0, 0, 0.7);
+  color: rgba(0, 123, 255, 0.7);
 }
 .radio-item.radio-item-primary.checked .radio-item-container .radio-item-thumb svg.radio-item-checked-icon {
   -ms-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
-  color: #b90000;
+  color: #007bff;
 }
 .radio-item.radio-item-primary.checked label {
-  color: #b90000;
+  color: #007bff;
 }
 .radio-item.radio-item-primary.hover .radio-item-container, .radio-item.radio-item-primary.active .radio-item-container {
-  background-color: rgba(185, 0, 0, 0.1);
+  background-color: rgba(0, 123, 255, 0.1);
 }
 
 .radio-item.radio-item-secondary .radio-item-container:hover, .radio-item.radio-item-secondary .radio-item-container:focus, .radio-item.radio-item-secondary .radio-item-container:active {
-  background-color: rgba(255, 206, 10, 0.1);
+  background-color: rgba(108, 117, 125, 0.1);
 }
 .radio-item.radio-item-secondary.checked .radio-item-container {
-  color: rgba(255, 206, 10, 0.7);
+  color: rgba(108, 117, 125, 0.7);
 }
 .radio-item.radio-item-secondary.checked .radio-item-container .radio-item-thumb svg.radio-item-checked-icon {
   -ms-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
-  color: #ffce0a;
+  color: #6c757d;
 }
 .radio-item.radio-item-secondary.checked label {
-  color: #ffce0a;
+  color: #6c757d;
 }
 .radio-item.radio-item-secondary.hover .radio-item-container, .radio-item.radio-item-secondary.active .radio-item-container {
-  background-color: rgba(255, 206, 10, 0.1);
+  background-color: rgba(108, 117, 125, 0.1);
 }
 
 .radio-item.radio-item-success .radio-item-container:hover, .radio-item.radio-item-success .radio-item-container:focus, .radio-item.radio-item-success .radio-item-container:active {
@@ -2010,21 +2010,21 @@ input[type=number] {
 
 .btn-primary {
   color: #fff;
-  background-color: #b90000;
+  background-color: #007bff;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #930000;
+  background-color: #0069d9;
 }
 .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary:active.focus, .btn-primary:active:focus {
   color: #fff;
-  background-color: #930000;
+  background-color: #0069d9;
 }
 .btn-primary .ink {
-  background-color: #860000;
+  background-color: #0062cc;
 }
 .btn-primary.btn-flat {
-  color: #b90000;
+  color: #007bff;
   background-color: transparent;
   border-color: transparent;
 }
@@ -2032,45 +2032,45 @@ input[type=number] {
   background-color: #e5e5e5;
 }
 .btn-primary.btn-flat:active, .btn-primary.btn-flat.active, .btn-primary.btn-flat:focus {
-  color: #b90000;
+  color: #007bff;
   background-color: #cccccc;
 }
 .btn-primary.btn-flat .ink {
   background-color: #808080;
 }
 .btn-primary.btn-outline {
-  border-color: #b90000;
+  border-color: #007bff;
   background-color: transparent;
-  color: #b90000;
+  color: #007bff;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus {
-  border-color: #860000;
-  background-color: #930000;
+  border-color: #0062cc;
+  background-color: #0069d9;
   color: #fff;
 }
 
 .btn-default.btn-flat.btn-primary {
-  color: #b90000;
+  color: #007bff;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
-  color: #212529;
-  background-color: #ffce0a;
+  color: #fff;
+  background-color: #6c757d;
 }
 .btn-secondary:hover {
-  color: #212529;
-  background-color: #e3b500;
+  color: #fff;
+  background-color: #5a6268;
 }
 .btn-secondary:focus, .btn-secondary.focus, .btn-secondary:active, .btn-secondary.active, .btn-secondary.active.focus, .btn-secondary.active:focus, .btn-secondary:active.focus, .btn-secondary:active:focus {
-  color: #212529;
-  background-color: #e3b500;
+  color: #fff;
+  background-color: #5a6268;
 }
 .btn-secondary .ink {
-  background-color: #d6ab00;
+  background-color: #545b62;
 }
 .btn-secondary.btn-flat {
-  color: #ffce0a;
+  color: #6c757d;
   background-color: transparent;
   border-color: transparent;
 }
@@ -2078,25 +2078,25 @@ input[type=number] {
   background-color: #e5e5e5;
 }
 .btn-secondary.btn-flat:active, .btn-secondary.btn-flat.active, .btn-secondary.btn-flat:focus {
-  color: #ffce0a;
+  color: #6c757d;
   background-color: #cccccc;
 }
 .btn-secondary.btn-flat .ink {
   background-color: #808080;
 }
 .btn-secondary.btn-outline {
-  border-color: #ffce0a;
+  border-color: #6c757d;
   background-color: transparent;
-  color: #ffce0a;
+  color: #6c757d;
 }
 .btn-secondary.btn-outline:hover, .btn-secondary.btn-outline:focus {
-  border-color: #d6ab00;
-  background-color: #e3b500;
-  color: #212529;
+  border-color: #545b62;
+  background-color: #5a6268;
+  color: #fff;
 }
 
 .btn-default.btn-flat.btn-secondary {
-  color: #ffce0a;
+  color: #6c757d;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -2511,7 +2511,7 @@ input[type=number] {
 }
 
 .alert.alert-primary {
-  background-color: #b90000;
+  background-color: #007bff;
   color: #fff;
   border: 0;
   border-radius: 8px;
@@ -2539,14 +2539,14 @@ input[type=number] {
 }
 .alert.alert-primary .btn-close:hover, .alert.alert-primary .btn-close:focus {
   border-radius: 40%;
-  background-color: #b90000;
+  background-color: #007bff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
 
 .alert.alert-secondary {
-  background-color: #ffce0a;
-  color: 10%;
+  background-color: #6c757d;
+  color: #fff;
   border: 0;
   border-radius: 8px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -2573,7 +2573,7 @@ input[type=number] {
 }
 .alert.alert-secondary .btn-close:hover, .alert.alert-secondary .btn-close:focus {
   border-radius: 40%;
-  background-color: #ffce0a;
+  background-color: #6c757d;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
@@ -2821,7 +2821,7 @@ input[type=number] {
 }
 
 .toast-primary {
-  background-color: #b90000;
+  background-color: #007bff;
   color: #fff;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   border: 0;
@@ -2830,17 +2830,17 @@ input[type=number] {
 .toast-primary .toast-header {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  background-color: #b90000;
+  background-color: #007bff;
   color: #fff;
-  border-bottom-color: #860000;
+  border-bottom-color: #0062cc;
 }
 .toast-primary .toast-header .text-muted {
   color: #fff !important;
 }
 
 .toast-secondary {
-  background-color: #ffce0a;
-  color: #212529;
+  background-color: #6c757d;
+  color: #fff;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   border: 0;
   border-radius: 8px;
@@ -2848,12 +2848,12 @@ input[type=number] {
 .toast-secondary .toast-header {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  background-color: #ffce0a;
-  color: #212529;
-  border-bottom-color: #d6ab00;
+  background-color: #6c757d;
+  color: #fff;
+  border-bottom-color: #545b62;
 }
 .toast-secondary .toast-header .text-muted {
-  color: #212529 !important;
+  color: #fff !important;
 }
 
 .toast-success {
@@ -2976,7 +2976,7 @@ input[type=number] {
 }
 
 .alert-toasts-primary {
-  background-color: #b90000;
+  background-color: #007bff;
   color: #fff;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   border: 0;
@@ -2984,8 +2984,8 @@ input[type=number] {
 }
 
 .alert-toasts-secondary {
-  background-color: #ffce0a;
-  color: #212529;
+  background-color: #6c757d;
+  color: #fff;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   border: 0;
   border-radius: 8px;
@@ -3114,18 +3114,18 @@ input[type=number] {
   border-radius: 50%;
 }
 .chip-primary {
-  background-color: #b90000;
+  background-color: #007bff;
   color: #fff;
 }
 .chip-primary .chip-action {
-  background-color: #ec0000;
+  background-color: #3395ff;
 }
 .chip-secondary {
-  background-color: #ffce0a;
-  color: #212529;
+  background-color: #6c757d;
+  color: #fff;
 }
 .chip-secondary .chip-action {
-  background-color: #ffd83d;
+  background-color: #868e96;
 }
 .chip-success {
   background-color: #28a745;

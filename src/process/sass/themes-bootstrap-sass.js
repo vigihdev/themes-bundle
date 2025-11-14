@@ -26,7 +26,6 @@ const PATHS = {
     }
 };
 
-
 // Sass Configuration
 const sass = {
     dist: {
@@ -64,7 +63,6 @@ const buildsConfig = {
     js: Object.keys(concatFiles.js)?.filter(f => fs.existsSync(f)),
     css: Object.keys(sass.dist.files)?.filter(f => fs.existsSync(f))
 };
-
 
 const watch = {
     js: [

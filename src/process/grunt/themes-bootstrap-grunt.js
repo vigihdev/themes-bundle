@@ -76,10 +76,34 @@ module.exports.ThemesBootstrapGrunt = function (grunt) {
     grunt.task.registerTask(`${COMMAND}:fresh`, 'Clean + Build fresh', [
         `${COMMAND}:clean`,
         `${COMMAND}:dist`,
+        `${COMMAND}:build`,
     ]);
 
     grunt.task.registerTask(`${COMMAND}`, 'Default Bootstrap task', function () {
         grunt.task.run(`${COMMAND}:build`);
+    });
+
+    grunt.task.registerTask(`${COMMAND}:watch`, 'Watch themes bootstrap grunt', function () {
+
+        const watch = ThemesBootstrapSass.watch;
+        const args = grunt?.task?.current?.args ?? [];
+        const initConfig = {
+            watch: {
+                css: {
+                    files: watch.css,
+                    tasks: [`${COMMAND}:dist`, `${COMMAND}:build`]
+                },
+                js: {
+                    files: watch.js,
+                    tasks: [`${COMMAND}:build`]
+                }
+
+            },
+        }
+
+        grunt.initConfig(initConfig)
+        grunt.task.run(['watch'])
+
     });
 
 };

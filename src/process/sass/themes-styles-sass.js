@@ -57,6 +57,7 @@ const watch = {
         `${BASEPATH}/*/src/scss/*/*.scss`,
         `${BASEPATH}/*/src/scss/*/*/*.scss`,
         `${BASEPATH}/*/src/scss/*/*/*/*.scss`,
+        `${BASEPATH}/*/src/scss/*/*/*/*/*.scss`,
     ]
 }
 

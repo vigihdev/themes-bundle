@@ -18,7 +18,6 @@ const PATHS = {
     }
 };
 
-
 // Sass Configuration
 const sass = {
     dist: {
