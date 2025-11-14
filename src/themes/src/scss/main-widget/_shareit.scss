@@ -1,0 +1,26 @@
+// share-it-widget
+.share-it-widget {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 32px;
+    background-image: url($base-url-images + "shareit.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $warning;
+    @include border-bottom-right-radius(32px);
+    @include border-bottom-left-radius(8px);
+    @include BoxShadow(4);
+    .share-it-widget-title {
+        .widget-title {
+            color: #fff;
+            @include poppins-bold;
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+    }
+    .share-it-widget-content {
+    }
+}

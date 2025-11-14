@@ -1,0 +1,836 @@
+.checkbox-outline .checkbox-outline-container {
+  display: inline-flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px none;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  padding: 9px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -moz-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -o-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.checkbox-outline .checkbox-outline-container svg.checkbox-icon {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none !important;
+  /* iOS Safari */
+  -webkit-user-select: none !important;
+  /* Safari */
+  -khtml-user-select: none !important;
+  /* Konqueror HTML */
+  -moz-user-select: none !important;
+  /* Firefox */
+  -ms-user-select: none !important;
+  /* Internet Explorer/Edge */
+  user-select: none !important;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+  width: 1em;
+  height: 1em;
+  font-size: 1.5rem;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: absolute;
+}
+.checkbox-outline .checkbox-outline-container svg.checkbox-icon::selection {
+  background: transparent;
+}
+.checkbox-outline .checkbox-outline-container svg.checkbox-icon::-moz-selection {
+  background: transparent;
+}
+.checkbox-outline .checkbox-outline-container svg.checkbox-icon.checkbox-outline-checked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.checkbox-outline .checkbox-outline-container svg.checkbox-icon.checkbox-outline-unchecked-icon {
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -moz-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -o-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: #939393;
+}
+.checkbox-outline .checkbox-outline-container input {
+  cursor: inherit;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+.checkbox-outline label {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none !important;
+  /* iOS Safari */
+  -webkit-user-select: none !important;
+  /* Safari */
+  -khtml-user-select: none !important;
+  /* Konqueror HTML */
+  -moz-user-select: none !important;
+  /* Firefox */
+  -ms-user-select: none !important;
+  /* Internet Explorer/Edge */
+  user-select: none !important;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.checkbox-outline label::selection {
+  background: transparent;
+}
+.checkbox-outline label::-moz-selection {
+  background: transparent;
+}
+
+.checkbox-outline.checkbox-outline-primary .checkbox-outline-container:hover, .checkbox-outline.checkbox-outline-primary .checkbox-outline-container:focus, .checkbox-outline.checkbox-outline-primary .checkbox-outline-container:active {
+  background-color: rgba(185, 0, 0, 0.2);
+}
+.checkbox-outline.checkbox-outline-primary.checked svg.checkbox-icon.checkbox-outline-checked-icon, .checkbox-outline.checkbox-outline-primary.checked svg.checkbox-icon.checkbox-outline-unchecked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #b90000;
+}
+.checkbox-outline.checkbox-outline-primary.checked label {
+  color: #b90000;
+}
+.checkbox-outline.checkbox-outline-primary.checkbox-outline-ripple .checkbox-outline-container {
+  background-color: rgba(185, 0, 0, 0.1);
+}
+
+.checkbox-outline.checkbox-outline-secondary .checkbox-outline-container:hover, .checkbox-outline.checkbox-outline-secondary .checkbox-outline-container:focus, .checkbox-outline.checkbox-outline-secondary .checkbox-outline-container:active {
+  background-color: rgba(255, 206, 10, 0.2);
+}
+.checkbox-outline.checkbox-outline-secondary.checked svg.checkbox-icon.checkbox-outline-checked-icon, .checkbox-outline.checkbox-outline-secondary.checked svg.checkbox-icon.checkbox-outline-unchecked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #ffce0a;
+}
+.checkbox-outline.checkbox-outline-secondary.checked label {
+  color: #ffce0a;
+}
+.checkbox-outline.checkbox-outline-secondary.checkbox-outline-ripple .checkbox-outline-container {
+  background-color: rgba(255, 206, 10, 0.1);
+}
+
+.checkbox-outline.checkbox-outline-success .checkbox-outline-container:hover, .checkbox-outline.checkbox-outline-success .checkbox-outline-container:focus, .checkbox-outline.checkbox-outline-success .checkbox-outline-container:active {
+  background-color: rgba(40, 167, 69, 0.2);
+}
+.checkbox-outline.checkbox-outline-success.checked svg.checkbox-icon.checkbox-outline-checked-icon, .checkbox-outline.checkbox-outline-success.checked svg.checkbox-icon.checkbox-outline-unchecked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #28a745;
+}
+.checkbox-outline.checkbox-outline-success.checked label {
+  color: #28a745;
+}
+.checkbox-outline.checkbox-outline-success.checkbox-outline-ripple .checkbox-outline-container {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.checkbox-outline.checkbox-outline-info .checkbox-outline-container:hover, .checkbox-outline.checkbox-outline-info .checkbox-outline-container:focus, .checkbox-outline.checkbox-outline-info .checkbox-outline-container:active {
+  background-color: rgba(23, 162, 184, 0.2);
+}
+.checkbox-outline.checkbox-outline-info.checked svg.checkbox-icon.checkbox-outline-checked-icon, .checkbox-outline.checkbox-outline-info.checked svg.checkbox-icon.checkbox-outline-unchecked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #17a2b8;
+}
+.checkbox-outline.checkbox-outline-info.checked label {
+  color: #17a2b8;
+}
+.checkbox-outline.checkbox-outline-info.checkbox-outline-ripple .checkbox-outline-container {
+  background-color: rgba(23, 162, 184, 0.1);
+}
+
+.checkbox-outline.checkbox-outline-warning .checkbox-outline-container:hover, .checkbox-outline.checkbox-outline-warning .checkbox-outline-container:focus, .checkbox-outline.checkbox-outline-warning .checkbox-outline-container:active {
+  background-color: rgba(255, 193, 7, 0.2);
+}
+.checkbox-outline.checkbox-outline-warning.checked svg.checkbox-icon.checkbox-outline-checked-icon, .checkbox-outline.checkbox-outline-warning.checked svg.checkbox-icon.checkbox-outline-unchecked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #ffc107;
+}
+.checkbox-outline.checkbox-outline-warning.checked label {
+  color: #ffc107;
+}
+.checkbox-outline.checkbox-outline-warning.checkbox-outline-ripple .checkbox-outline-container {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.checkbox-outline.checkbox-outline-danger .checkbox-outline-container:hover, .checkbox-outline.checkbox-outline-danger .checkbox-outline-container:focus, .checkbox-outline.checkbox-outline-danger .checkbox-outline-container:active {
+  background-color: rgba(220, 53, 69, 0.2);
+}
+.checkbox-outline.checkbox-outline-danger.checked svg.checkbox-icon.checkbox-outline-checked-icon, .checkbox-outline.checkbox-outline-danger.checked svg.checkbox-icon.checkbox-outline-unchecked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #dc3545;
+}
+.checkbox-outline.checkbox-outline-danger.checked label {
+  color: #dc3545;
+}
+.checkbox-outline.checkbox-outline-danger.checkbox-outline-ripple .checkbox-outline-container {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.checkbox-outline.checkbox-outline-light .checkbox-outline-container:hover, .checkbox-outline.checkbox-outline-light .checkbox-outline-container:focus, .checkbox-outline.checkbox-outline-light .checkbox-outline-container:active {
+  background-color: rgba(248, 249, 250, 0.2);
+}
+.checkbox-outline.checkbox-outline-light.checked svg.checkbox-icon.checkbox-outline-checked-icon, .checkbox-outline.checkbox-outline-light.checked svg.checkbox-icon.checkbox-outline-unchecked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #f8f9fa;
+}
+.checkbox-outline.checkbox-outline-light.checked label {
+  color: #f8f9fa;
+}
+.checkbox-outline.checkbox-outline-light.checkbox-outline-ripple .checkbox-outline-container {
+  background-color: rgba(248, 249, 250, 0.1);
+}
+
+.checkbox-outline.checkbox-outline-dark .checkbox-outline-container:hover, .checkbox-outline.checkbox-outline-dark .checkbox-outline-container:focus, .checkbox-outline.checkbox-outline-dark .checkbox-outline-container:active {
+  background-color: rgba(52, 58, 64, 0.2);
+}
+.checkbox-outline.checkbox-outline-dark.checked svg.checkbox-icon.checkbox-outline-checked-icon, .checkbox-outline.checkbox-outline-dark.checked svg.checkbox-icon.checkbox-outline-unchecked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #343a40;
+}
+.checkbox-outline.checkbox-outline-dark.checked label {
+  color: #343a40;
+}
+.checkbox-outline.checkbox-outline-dark.checkbox-outline-ripple .checkbox-outline-container {
+  background-color: rgba(52, 58, 64, 0.1);
+}
+
+.checkbox-circle .checkbox-circle-container {
+  display: inline-flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px none;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  padding: 9px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -moz-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -o-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.checkbox-circle .checkbox-circle-container svg.radio-svg-icon {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none !important;
+  /* iOS Safari */
+  -webkit-user-select: none !important;
+  /* Safari */
+  -khtml-user-select: none !important;
+  /* Konqueror HTML */
+  -moz-user-select: none !important;
+  /* Firefox */
+  -ms-user-select: none !important;
+  /* Internet Explorer/Edge */
+  user-select: none !important;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+  width: 1em;
+  height: 1em;
+  font-size: 1.5rem;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: absolute;
+}
+.checkbox-circle .checkbox-circle-container svg.radio-svg-icon::selection {
+  background: transparent;
+}
+.checkbox-circle .checkbox-circle-container svg.radio-svg-icon::-moz-selection {
+  background: transparent;
+}
+.checkbox-circle .checkbox-circle-container input {
+  cursor: inherit;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+.checkbox-circle label {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none !important;
+  /* iOS Safari */
+  -webkit-user-select: none !important;
+  /* Safari */
+  -khtml-user-select: none !important;
+  /* Konqueror HTML */
+  -moz-user-select: none !important;
+  /* Firefox */
+  -ms-user-select: none !important;
+  /* Internet Explorer/Edge */
+  user-select: none !important;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.checkbox-circle label::selection {
+  background: transparent;
+}
+.checkbox-circle label::-moz-selection {
+  background: transparent;
+}
+
+.checkbox-circle.checkbox-circle-primary .checkbox-circle-container:hover, .checkbox-circle.checkbox-circle-primary .checkbox-circle-container:focus, .checkbox-circle.checkbox-circle-primary .checkbox-circle-container:active {
+  background-color: rgba(185, 0, 0, 0.2);
+}
+.checkbox-circle.checkbox-circle-primary svg.radio-svg-icon.checkbox-primary-checked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.checkbox-circle.checkbox-circle-primary svg.radio-svg-icon.checkbox-primary-unchecked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  fill: #c8c8c8;
+}
+.checkbox-circle.checkbox-circle-primary.checked svg.radio-svg-icon.checkbox-primary-checked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #b90000;
+  fill: #b90000;
+}
+.checkbox-circle.checkbox-circle-primary.checked svg.radio-svg-icon.checkbox-primary-unchecked-icon {
+  fill: #b90000;
+}
+.checkbox-circle.checkbox-circle-primary.checked label {
+  color: #b90000;
+}
+.checkbox-circle.checkbox-circle-primary.checkbox-circle-ripple .checkbox-circle-container {
+  background-color: rgba(185, 0, 0, 0.1);
+}
+
+.checkbox-circle.checkbox-circle-secondary .checkbox-circle-container:hover, .checkbox-circle.checkbox-circle-secondary .checkbox-circle-container:focus, .checkbox-circle.checkbox-circle-secondary .checkbox-circle-container:active {
+  background-color: rgba(255, 206, 10, 0.2);
+}
+.checkbox-circle.checkbox-circle-secondary svg.radio-svg-icon.checkbox-secondary-checked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.checkbox-circle.checkbox-circle-secondary svg.radio-svg-icon.checkbox-secondary-unchecked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  fill: #c8c8c8;
+}
+.checkbox-circle.checkbox-circle-secondary.checked svg.radio-svg-icon.checkbox-secondary-checked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #ffce0a;
+  fill: #ffce0a;
+}
+.checkbox-circle.checkbox-circle-secondary.checked svg.radio-svg-icon.checkbox-secondary-unchecked-icon {
+  fill: #ffce0a;
+}
+.checkbox-circle.checkbox-circle-secondary.checked label {
+  color: #ffce0a;
+}
+.checkbox-circle.checkbox-circle-secondary.checkbox-circle-ripple .checkbox-circle-container {
+  background-color: rgba(255, 206, 10, 0.1);
+}
+
+.checkbox-circle.checkbox-circle-success .checkbox-circle-container:hover, .checkbox-circle.checkbox-circle-success .checkbox-circle-container:focus, .checkbox-circle.checkbox-circle-success .checkbox-circle-container:active {
+  background-color: rgba(40, 167, 69, 0.2);
+}
+.checkbox-circle.checkbox-circle-success svg.radio-svg-icon.checkbox-success-checked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.checkbox-circle.checkbox-circle-success svg.radio-svg-icon.checkbox-success-unchecked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  fill: #c8c8c8;
+}
+.checkbox-circle.checkbox-circle-success.checked svg.radio-svg-icon.checkbox-success-checked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #28a745;
+  fill: #28a745;
+}
+.checkbox-circle.checkbox-circle-success.checked svg.radio-svg-icon.checkbox-success-unchecked-icon {
+  fill: #28a745;
+}
+.checkbox-circle.checkbox-circle-success.checked label {
+  color: #28a745;
+}
+.checkbox-circle.checkbox-circle-success.checkbox-circle-ripple .checkbox-circle-container {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.checkbox-circle.checkbox-circle-info .checkbox-circle-container:hover, .checkbox-circle.checkbox-circle-info .checkbox-circle-container:focus, .checkbox-circle.checkbox-circle-info .checkbox-circle-container:active {
+  background-color: rgba(23, 162, 184, 0.2);
+}
+.checkbox-circle.checkbox-circle-info svg.radio-svg-icon.checkbox-info-checked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.checkbox-circle.checkbox-circle-info svg.radio-svg-icon.checkbox-info-unchecked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  fill: #c8c8c8;
+}
+.checkbox-circle.checkbox-circle-info.checked svg.radio-svg-icon.checkbox-info-checked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #17a2b8;
+  fill: #17a2b8;
+}
+.checkbox-circle.checkbox-circle-info.checked svg.radio-svg-icon.checkbox-info-unchecked-icon {
+  fill: #17a2b8;
+}
+.checkbox-circle.checkbox-circle-info.checked label {
+  color: #17a2b8;
+}
+.checkbox-circle.checkbox-circle-info.checkbox-circle-ripple .checkbox-circle-container {
+  background-color: rgba(23, 162, 184, 0.1);
+}
+
+.checkbox-circle.checkbox-circle-warning .checkbox-circle-container:hover, .checkbox-circle.checkbox-circle-warning .checkbox-circle-container:focus, .checkbox-circle.checkbox-circle-warning .checkbox-circle-container:active {
+  background-color: rgba(255, 193, 7, 0.2);
+}
+.checkbox-circle.checkbox-circle-warning svg.radio-svg-icon.checkbox-warning-checked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.checkbox-circle.checkbox-circle-warning svg.radio-svg-icon.checkbox-warning-unchecked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  fill: #c8c8c8;
+}
+.checkbox-circle.checkbox-circle-warning.checked svg.radio-svg-icon.checkbox-warning-checked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #ffc107;
+  fill: #ffc107;
+}
+.checkbox-circle.checkbox-circle-warning.checked svg.radio-svg-icon.checkbox-warning-unchecked-icon {
+  fill: #ffc107;
+}
+.checkbox-circle.checkbox-circle-warning.checked label {
+  color: #ffc107;
+}
+.checkbox-circle.checkbox-circle-warning.checkbox-circle-ripple .checkbox-circle-container {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.checkbox-circle.checkbox-circle-danger .checkbox-circle-container:hover, .checkbox-circle.checkbox-circle-danger .checkbox-circle-container:focus, .checkbox-circle.checkbox-circle-danger .checkbox-circle-container:active {
+  background-color: rgba(220, 53, 69, 0.2);
+}
+.checkbox-circle.checkbox-circle-danger svg.radio-svg-icon.checkbox-danger-checked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.checkbox-circle.checkbox-circle-danger svg.radio-svg-icon.checkbox-danger-unchecked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  fill: #c8c8c8;
+}
+.checkbox-circle.checkbox-circle-danger.checked svg.radio-svg-icon.checkbox-danger-checked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #dc3545;
+  fill: #dc3545;
+}
+.checkbox-circle.checkbox-circle-danger.checked svg.radio-svg-icon.checkbox-danger-unchecked-icon {
+  fill: #dc3545;
+}
+.checkbox-circle.checkbox-circle-danger.checked label {
+  color: #dc3545;
+}
+.checkbox-circle.checkbox-circle-danger.checkbox-circle-ripple .checkbox-circle-container {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.checkbox-circle.checkbox-circle-light .checkbox-circle-container:hover, .checkbox-circle.checkbox-circle-light .checkbox-circle-container:focus, .checkbox-circle.checkbox-circle-light .checkbox-circle-container:active {
+  background-color: rgba(248, 249, 250, 0.2);
+}
+.checkbox-circle.checkbox-circle-light svg.radio-svg-icon.checkbox-light-checked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.checkbox-circle.checkbox-circle-light svg.radio-svg-icon.checkbox-light-unchecked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  fill: #c8c8c8;
+}
+.checkbox-circle.checkbox-circle-light.checked svg.radio-svg-icon.checkbox-light-checked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #f8f9fa;
+  fill: #f8f9fa;
+}
+.checkbox-circle.checkbox-circle-light.checked svg.radio-svg-icon.checkbox-light-unchecked-icon {
+  fill: #f8f9fa;
+}
+.checkbox-circle.checkbox-circle-light.checked label {
+  color: #f8f9fa;
+}
+.checkbox-circle.checkbox-circle-light.checkbox-circle-ripple .checkbox-circle-container {
+  background-color: rgba(248, 249, 250, 0.1);
+}
+
+.checkbox-circle.checkbox-circle-dark .checkbox-circle-container:hover, .checkbox-circle.checkbox-circle-dark .checkbox-circle-container:focus, .checkbox-circle.checkbox-circle-dark .checkbox-circle-container:active {
+  background-color: rgba(52, 58, 64, 0.2);
+}
+.checkbox-circle.checkbox-circle-dark svg.radio-svg-icon.checkbox-dark-checked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.checkbox-circle.checkbox-circle-dark svg.radio-svg-icon.checkbox-dark-unchecked-icon {
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  fill: #c8c8c8;
+}
+.checkbox-circle.checkbox-circle-dark.checked svg.radio-svg-icon.checkbox-dark-checked-icon {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #343a40;
+  fill: #343a40;
+}
+.checkbox-circle.checkbox-circle-dark.checked svg.radio-svg-icon.checkbox-dark-unchecked-icon {
+  fill: #343a40;
+}
+.checkbox-circle.checkbox-circle-dark.checked label {
+  color: #343a40;
+}
+.checkbox-circle.checkbox-circle-dark.checkbox-circle-ripple .checkbox-circle-container {
+  background-color: rgba(52, 58, 64, 0.1);
+}
+
+.checkbox-switch-group {
+  display: inline-flex;
+  align-items: center;
+}
+.checkbox-switch-group .checkbox-switch {
+  display: inline-flex;
+  width: 58px;
+  height: 38px;
+  overflow: hidden;
+  padding: 12px;
+  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
+  z-index: 0;
+  vertical-align: middle;
+}
+.checkbox-switch-group .checkbox-switch .checkbox-switch-container {
+  display: inline-flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px none;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  padding: 9px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  color: #e0e0e0;
+}
+.checkbox-switch-group .checkbox-switch .checkbox-switch-container input {
+  cursor: inherit;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+.checkbox-switch-group .checkbox-switch .checkbox-switch-container .switch-thumb {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  -ms-transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -moz-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  -o-transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition-duration: 140ms;
+  background-color: currentcolor;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.checkbox-switch-group .checkbox-switch .switch-thumb-ripple {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  border-radius: 50%;
+}
+.checkbox-switch-group .checkbox-switch .checkbox-switch-track {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+  z-index: -1;
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -moz-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -o-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #939393;
+  opacity: 0.6;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-switch-group .checkbox-switch.checked .checkbox-switch-container .switch-thumb,
+.checkbox-switch-group .checkbox-switch.checked .checkbox-switch-container .switch-thumb-ripple {
+  -ms-transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+.checkbox-switch-group label {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none !important;
+  /* iOS Safari */
+  -webkit-user-select: none !important;
+  /* Safari */
+  -khtml-user-select: none !important;
+  /* Konqueror HTML */
+  -moz-user-select: none !important;
+  /* Firefox */
+  -ms-user-select: none !important;
+  /* Internet Explorer/Edge */
+  user-select: none !important;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.checkbox-switch-group label::selection {
+  background: transparent;
+}
+.checkbox-switch-group label::-moz-selection {
+  background: transparent;
+}
+
+.checkbox-switch.checkbox-switch-primary.checked .checkbox-switch-track {
+  background-color: #b90000;
+}
+.checkbox-switch.checkbox-switch-primary.checked .checkbox-switch-container .switch-thumb {
+  background-color: #b90000;
+}
+.checkbox-switch.checkbox-switch-primary.switch-ripple .checkbox-switch-container .switch-thumb-ripple {
+  background: rgba(185, 0, 0, 0.2);
+}
+.checkbox-switch.checkbox-switch-primary:hover .switch-thumb, .checkbox-switch.checkbox-switch-primary:focus .switch-thumb, .checkbox-switch.checkbox-switch-primary:active .switch-thumb {
+  box-shadow: rgba(185, 0, 0, 0.2) 0px 0px 0px 8px;
+}
+
+.checkbox-switch.checkbox-switch-secondary.checked .checkbox-switch-track {
+  background-color: #ffce0a;
+}
+.checkbox-switch.checkbox-switch-secondary.checked .checkbox-switch-container .switch-thumb {
+  background-color: #ffce0a;
+}
+.checkbox-switch.checkbox-switch-secondary.switch-ripple .checkbox-switch-container .switch-thumb-ripple {
+  background: rgba(255, 206, 10, 0.2);
+}
+.checkbox-switch.checkbox-switch-secondary:hover .switch-thumb, .checkbox-switch.checkbox-switch-secondary:focus .switch-thumb, .checkbox-switch.checkbox-switch-secondary:active .switch-thumb {
+  box-shadow: rgba(255, 206, 10, 0.2) 0px 0px 0px 8px;
+}
+
+.checkbox-switch.checkbox-switch-success.checked .checkbox-switch-track {
+  background-color: #28a745;
+}
+.checkbox-switch.checkbox-switch-success.checked .checkbox-switch-container .switch-thumb {
+  background-color: #28a745;
+}
+.checkbox-switch.checkbox-switch-success.switch-ripple .checkbox-switch-container .switch-thumb-ripple {
+  background: rgba(40, 167, 69, 0.2);
+}
+.checkbox-switch.checkbox-switch-success:hover .switch-thumb, .checkbox-switch.checkbox-switch-success:focus .switch-thumb, .checkbox-switch.checkbox-switch-success:active .switch-thumb {
+  box-shadow: rgba(40, 167, 69, 0.2) 0px 0px 0px 8px;
+}
+
+.checkbox-switch.checkbox-switch-info.checked .checkbox-switch-track {
+  background-color: #17a2b8;
+}
+.checkbox-switch.checkbox-switch-info.checked .checkbox-switch-container .switch-thumb {
+  background-color: #17a2b8;
+}
+.checkbox-switch.checkbox-switch-info.switch-ripple .checkbox-switch-container .switch-thumb-ripple {
+  background: rgba(23, 162, 184, 0.2);
+}
+.checkbox-switch.checkbox-switch-info:hover .switch-thumb, .checkbox-switch.checkbox-switch-info:focus .switch-thumb, .checkbox-switch.checkbox-switch-info:active .switch-thumb {
+  box-shadow: rgba(23, 162, 184, 0.2) 0px 0px 0px 8px;
+}
+
+.checkbox-switch.checkbox-switch-warning.checked .checkbox-switch-track {
+  background-color: #ffc107;
+}
+.checkbox-switch.checkbox-switch-warning.checked .checkbox-switch-container .switch-thumb {
+  background-color: #ffc107;
+}
+.checkbox-switch.checkbox-switch-warning.switch-ripple .checkbox-switch-container .switch-thumb-ripple {
+  background: rgba(255, 193, 7, 0.2);
+}
+.checkbox-switch.checkbox-switch-warning:hover .switch-thumb, .checkbox-switch.checkbox-switch-warning:focus .switch-thumb, .checkbox-switch.checkbox-switch-warning:active .switch-thumb {
+  box-shadow: rgba(255, 193, 7, 0.2) 0px 0px 0px 8px;
+}
+
+.checkbox-switch.checkbox-switch-danger.checked .checkbox-switch-track {
+  background-color: #dc3545;
+}
+.checkbox-switch.checkbox-switch-danger.checked .checkbox-switch-container .switch-thumb {
+  background-color: #dc3545;
+}
+.checkbox-switch.checkbox-switch-danger.switch-ripple .checkbox-switch-container .switch-thumb-ripple {
+  background: rgba(220, 53, 69, 0.2);
+}
+.checkbox-switch.checkbox-switch-danger:hover .switch-thumb, .checkbox-switch.checkbox-switch-danger:focus .switch-thumb, .checkbox-switch.checkbox-switch-danger:active .switch-thumb {
+  box-shadow: rgba(220, 53, 69, 0.2) 0px 0px 0px 8px;
+}
+
+.checkbox-switch.checkbox-switch-light.checked .checkbox-switch-track {
+  background-color: #f8f9fa;
+}
+.checkbox-switch.checkbox-switch-light.checked .checkbox-switch-container .switch-thumb {
+  background-color: #f8f9fa;
+}
+.checkbox-switch.checkbox-switch-light.switch-ripple .checkbox-switch-container .switch-thumb-ripple {
+  background: rgba(248, 249, 250, 0.2);
+}
+.checkbox-switch.checkbox-switch-light:hover .switch-thumb, .checkbox-switch.checkbox-switch-light:focus .switch-thumb, .checkbox-switch.checkbox-switch-light:active .switch-thumb {
+  box-shadow: rgba(248, 249, 250, 0.2) 0px 0px 0px 8px;
+}
+
+.checkbox-switch.checkbox-switch-dark.checked .checkbox-switch-track {
+  background-color: #343a40;
+}
+.checkbox-switch.checkbox-switch-dark.checked .checkbox-switch-container .switch-thumb {
+  background-color: #343a40;
+}
+.checkbox-switch.checkbox-switch-dark.switch-ripple .checkbox-switch-container .switch-thumb-ripple {
+  background: rgba(52, 58, 64, 0.2);
+}
+.checkbox-switch.checkbox-switch-dark:hover .switch-thumb, .checkbox-switch.checkbox-switch-dark:focus .switch-thumb, .checkbox-switch.checkbox-switch-dark:active .switch-thumb {
+  box-shadow: rgba(52, 58, 64, 0.2) 0px 0px 0px 8px;
+}

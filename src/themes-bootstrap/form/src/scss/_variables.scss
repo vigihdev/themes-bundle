@@ -1,0 +1,41 @@
+// Textfield
+$form-state-theme-colors: map-remove(
+	$theme-colors,
+	"default",
+	"primary",
+	"secondary",
+	"info",
+	"danger",
+	"light",
+	"dark",
+	"inverse",
+	"information"
+);
+$textfield-font-size: $font-size-base !default;
+$textfield-border-height: $border-width !default;
+$textfield-padding-bottom: 0.375rem !default;
+$textfield-label-font-weight: normal !default;
+$textfield-label-line-height: 1.4 !default;
+$textfield-label-font-size: $font-size-sm !default;
+$textfield-label-color: rgba($black, 0.54) !default;
+
+$textfield-transition: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$textfield-transition-durasion: 0.2s !default;
+$textfield-focused-height: 2px !default;
+$textfield-focused-bg: $primary;
+
+$textfield-height-sm: calc(1.5em + 1.2rem);
+$textfield-height-default: calc(1.5em + 1.75rem);
+$textfield-height-single: calc(1.5em + 0.375rem + 0.5rem + 1px);
+$textfield-height-lg: calc(1.5em + 1.75rem);
+$textfield-line-height: 1.375rem !default;
+$textfield-margin-bottom: 1.5rem !default;
+
+$textfield-border-width: 2px !default;
+$textfield-border-color: rgba(0, 0, 0, 0.12) !default;
+$textfield-border: 1px solid $textfield-border-color !default;
+$textfield-border-radius: 0.3rem !default;
+$textfield-floating-active-border-color: $textfield-focused-bg !default;
+$textfield-outline-border-defauld: $textfield-border;
+$textfield-outline-border-active: 2px solid $textfield-focused-bg !default;
+$textfield-outline-material-icons-color: $black !default;

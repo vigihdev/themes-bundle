@@ -1,0 +1,140 @@
+.relative {
+	position: relative !important;
+}
+
+.absolute {
+	position: absolute !important;
+}
+
+.pointer,
+.hover {
+	cursor: pointer !important;
+}
+.none,
+.hidden,
+.hide {
+	display: none !important;
+}
+.text-black {
+	color: #000000 !important;
+}
+.strong,
+.bold {
+	font-weight: 700;
+	.material-icons {
+		font-weight: 700;
+	}
+}
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+.no-select-text,
+.user-select-none {
+	@include user-select-none();
+}
+
+.pointer-events-none {
+	pointer-events: none;
+}
+
+.pointer,
+.hover {
+	cursor: pointer !important;
+}
+.none,
+.hidden,
+.hide {
+	display: none !important;
+}
+.pointer-events-none {
+	pointer-events: none;
+}
+
+.no-getter {
+	margin-right: -15px !important;
+	margin-left: -15px !important;
+}
+
+.roboto-thin {
+	font-family: $font-family-roboto-thin !important;
+}
+.roboto-light {
+	font-family: $font-family-roboto-light !important;
+}
+.roboto {
+	font-family: $font-family-roboto-regular !important;
+}
+.roboto-regular {
+	font-family: $font-family-roboto-regular !important;
+}
+.roboto-medium {
+	font-family: $font-family-roboto-medium !important;
+}
+.roboto-bold {
+	font-family: $font-family-roboto-bold !important;
+}
+.roboto-black {
+	font-family: $font-family-roboto-black !important;
+}
+// Size Width Height Use Rem
+@for $i from 1 to 20 {
+	.h-#{$i} {
+		height: #{$i}rem;
+	}
+	.w-#{$i} {
+		width: #{$i}rem;
+	}
+	.size-#{$i} {
+		@include size(#{$i}rem);
+	}
+}
+
+// Shadow Material
+@for $i from 1 to 10 {
+	.zdepth-#{$i} {
+		@include BoxShadow($i);
+	}
+}
+
+@for $i from 1 through 10 {
+	.shadow--dp#{$i} {
+		@include BoxShadow($i);
+	}
+}
+
+@for $i from 1 through 24 {
+	@if $i % 2 == 0 {
+		.border-r#{$i} {
+			@include border-radius($i + 0px);
+		}
+		.border-topr#{$i} {
+			@include border-top-radius($i + 0px);
+		}
+		.border-bottomr#{$i} {
+			@include border-bottom-radius($i + 0px);
+		}
+		.border-leftr#{$i} {
+			@include border-left-radius($i + 0px);
+		}
+		.border-rightr#{$i} {
+			@include border-right-radius($i + 0px);
+		}
+	}
+}
+
+@for $i from 8 through 40 {
+	.f#{$i} {
+		font-size: $i + px !important;
+	}
+}

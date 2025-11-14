@@ -1,0 +1,43 @@
+$circle-width: 48px;
+
+@keyframes rotation {
+    0% {
+        @include transform-rotate(0deg);
+    }
+    100% {
+        @include transform-rotate(360deg);
+    }
+}
+
+.loader-circle {
+    @include border-radius(50%);
+    @include BoxShadow(1);
+    display: flex;
+    width: $circle-width;
+    height: $circle-width;
+    border: 5px solid;
+    background: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the loader-circle.
+
+@each $color, $value in $theme-colors {
+    .loader-circle-#{$color} {
+        border-color: $value;
+        border-bottom-color: color-yiq($value);
+
+        @if $color == "primary" {
+            border-bottom-color: $secondary;
+        }
+
+        @if $color == "secondary" {
+            border-bottom-color: $primary;
+        }
+    }
+}

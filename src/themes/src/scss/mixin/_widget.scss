@@ -1,0 +1,49 @@
+@mixin widget-title() {
+    display: flex;
+    position: relative;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 16px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        height: 3px;
+        right: 15px;
+        left: 15px;
+        @include centerYY;
+        background: #ffc107;
+    }
+    .widget-title {
+        z-index: 2;
+        margin: 0;
+        padding: 4px 8px;
+        background: #cc0000;
+        @include border-radius(4px);
+        color: #fff;
+        font-size: 1.2em;
+        @include poppins-medium;
+        @include BoxShadow(2);
+    }
+}
+
+@mixin widget-title-footer() {
+    @include poppins-bold;
+    font-size: 1em;
+    padding: 12px 0;
+    position: relative;
+    margin-bottom: 24px;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $warning;
+        height: 4px;
+        width: 48px;
+        filter: drop-shadow-elevation(8);
+    }
+}

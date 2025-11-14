@@ -1,0 +1,305 @@
+@mixin resetFormControl() {
+    background-color: transparent;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    transition:
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    font-size: $textfield-font-size;
+    padding-bottom: $textfield-padding-bottom;
+    height: $textfield-height-single;
+    @include focus {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+// new
+.form-group.textfield {
+    position: relative;
+}
+
+.textfield .custom-select,
+.textfield .form-control {
+    @include resetFormControl();
+    height: $textfield-height-single;
+    border-bottom: $textfield-border;
+    &.form-control-sm {
+        height: $textfield-height-sm !important;
+        font-size: 0.9em;
+        line-height: 1.4em;
+    }
+}
+
+textarea.form-control {
+    height: inherit !important;
+}
+
+.textfield-floating-label .form-control {
+    position: relative;
+}
+
+.textfield {
+    label {
+        font-weight: $textfield-label-font-weight;
+        line-height: $textfield-label-line-height;
+        font-size: $textfield-label-font-size;
+        color: $textfield-label-color;
+        margin-bottom: 0;
+    }
+
+    &.textfield-floating-label {
+        label {
+            font-size: 1rem;
+            @include transitionTimingFunction($textfield-transition);
+            @include transitionDuration(0.2s);
+            @include transform-translateY(26px);
+        }
+        &.textfield-floating-label-active {
+            .textfield-focused {
+                @include transform-scalex(1);
+            }
+        }
+
+        &.textfield-floating-label-completed label {
+            font-size: 0.875rem;
+            color: rgba(0, 0, 0, 0.54);
+            @include transform-translateY(0);
+        }
+        &.textfield-floating-label-active.textfield-floating-label-completed label {
+            color: $textfield-focused-bg;
+            font-weight: $font-weight-bolds;
+        }
+    }
+
+    .textfield-focused {
+        position: relative;
+        top: -1px;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: $textfield-focused-height;
+        background-color: $textfield-focused-bg;
+        @include transitionTimingFunction($textfield-transition);
+        @include transitionDuration(0.2s);
+        @include transform-scalex(0);
+    }
+
+    // .textfield-outline
+    &.textfield-outline {
+        .textfield-outline-wrapper {
+            position: relative;
+            .textfield-label-wrapper {
+                position: absolute;
+                right: 0;
+                left: 0;
+                display: flex;
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                text-align: left;
+                pointer-events: none;
+
+                .textfield-outline-left {
+                    width: 8px;
+                    border-right: none;
+                    border-left: $textfield-border;
+                    border-radius: $textfield-border-radius 0 0 $textfield-border-radius;
+                }
+
+                .textfield-outline-middle {
+                    padding-right: $textfield-border-radius;
+                    padding-left: $textfield-border-radius;
+                    border-top: $textfield-border;
+                }
+
+                .textfield-outline-right {
+                    border-right: $textfield-border;
+                    border-left: none;
+                    border-radius: 0 $textfield-border-radius $textfield-border-radius 0;
+                    flex: auto;
+                }
+
+                .textfield-outline-left,
+                .textfield-outline-middle,
+                .textfield-outline-right {
+                    height: 100%;
+                    box-sizing: border-box;
+                    pointer-events: none;
+                    border-top: $textfield-border;
+                    border-bottom: $textfield-border;
+                    transition: border 150ms $textfield-transition;
+                }
+            }
+
+            .cleared-input {
+                position: absolute;
+                @include centerYY;
+                right: 16px;
+                font-size: 1.1em;
+                color: #000000;
+                font-weight: 700;
+                z-index: 1000;
+            }
+        }
+
+        .form-control {
+            border-bottom: 0;
+            height: $textfield-height-default;
+        }
+
+        &.textfield-floating-label label {
+            @include transform-translateY(14px);
+        }
+        &.textfield-floating-label.textfield-floating-label-active {
+            .textfield-outline-left,
+            .textfield-outline-middle,
+            .textfield-outline-right {
+                border-top: $textfield-outline-border-active;
+                border-bottom: $textfield-outline-border-active;
+            }
+
+            .textfield-outline-left {
+                border-left: $textfield-outline-border-active;
+            }
+
+            .textfield-outline-right {
+                border-right: $textfield-outline-border-active;
+            }
+
+            .textfield-outline-middle {
+                label {
+                    font-family: $font-family-roboto-bold;
+                    color: $dark;
+                }
+            }
+        }
+        &.textfield-floating-label.textfield-floating-label-completed {
+            label {
+                padding-left: 4px;
+                padding-right: 4px;
+                @include transform-translateY(-11px);
+            }
+            .textfield-outline-wrapper .textfield-label-wrapper .textfield-outline-middle {
+                border-top: none !important;
+            }
+        }
+    }
+} //textfield
+
+// input-group
+.form-group.textfield,
+.input-group.input-group-outline.input-group-icon {
+    margin-bottom: $textfield-margin-bottom;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+
+    // input-group-outline.input-group-icon
+    &.input-group-outline.input-group-icon {
+        .input-group-append,
+        .input-group-prepend {
+            position: absolute;
+            height: 100%;
+            display: flex;
+            z-index: 4;
+            .input-group-text {
+                background-color: transparent;
+                border: none;
+                display: flex;
+                align-items: center;
+                padding: 0.375rem 0.75rem;
+                margin-bottom: 0;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                text-align: center;
+                white-space: nowrap;
+                .material-icons {
+                    color: $textfield-outline-material-icons-color;
+                }
+            }
+        }
+        .input-group-append {
+            right: 0;
+            margin-left: -1px;
+        }
+        .input-group-prepend {
+            ~ .textfield-outline.textfield-floating-label label {
+                padding-left: 26px;
+            }
+            ~ .textfield-outline.textfield-floating-label .form-control {
+                padding-left: 40px;
+            }
+            ~ .textfield-outline.textfield-floating-label.textfield-floating-label-completed label {
+                padding-left: 4px;
+            }
+        }
+    }
+    // end input-group-outline.input-group-icon
+}
+// end input-group
+
+// error
+@mixin error() {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    bottom: -20px;
+}
+
+.form-text.help-block.help-block-error {
+    @include error();
+}
+
+.form-group,
+.input-group {
+    .invalid-feedback {
+        @include error();
+    }
+}
+
+.input-group-filled > .textfield,
+.input-group-outline > .textfield,
+.input-group > .textfield {
+    position: relative;
+    width: 1%;
+    margin-bottom: 0;
+    flex: 1 1 auto;
+}
+
+// Theme Color
+@each $color, $value in $theme-colors {
+    .textfield-#{$color}.textfield-outline.textfield-floating-label.textfield-floating-label-active {
+        .textfield-outline-left,
+        .textfield-outline-middle,
+        .textfield-outline-right {
+            border-top: $textfield-border-width solid $value;
+            border-bottom: $textfield-border-width solid $value;
+        }
+
+        .textfield-outline-left {
+            border-left: $textfield-border-width solid $value;
+        }
+
+        .textfield-outline-right {
+            border-right: $textfield-border-width solid $value;
+        }
+    }
+}

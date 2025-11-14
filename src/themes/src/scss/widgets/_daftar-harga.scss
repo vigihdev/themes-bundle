@@ -1,0 +1,62 @@
+// daftar-harga
+.list-daftar-harga {
+    display: flex;
+    flex-wrap: wrap;
+    @include media-screen-max(md) {
+        justify-content: center;
+    }
+}
+
+.bulanan-daftar-harga-card {
+    margin-bottom: $getter;
+    flex: 0 0 calc((100% / 3) - 16px);
+    margin-right: $getter;
+    @include BoxShadow(2);
+    @include border-radius(8px);
+    background: #fff;
+    @include media-screen-min-max(xs, sm) {
+        flex: 0 0 calc((100% / 1) - 16px);
+        margin-right: 0;
+    }
+    @include media-screen-min-max(sm, md) {
+        flex: 0 0 calc((100% / 2) - 16px);
+    }
+    .group-daftar-harga {
+        &.group-daftar-harga-nama-mobil,
+        &.group-daftar-harga-harga {
+            border-bottom: 1px solid #d6d6d6;
+            padding: 8px;
+        }
+
+        &.group-daftar-harga-media {
+            .img-media {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                aspect-ratio: 1 auto;
+            }
+        }
+        &.group-daftar-harga-nama-mobil {
+            .nama-mobil {
+                @include poppins-bold;
+                font-size: 1.2em;
+                color: $black;
+                padding: 8px;
+            }
+        }
+        &.group-daftar-harga-harga {
+            .text-harga {
+                color: #ef7a34;
+                @include poppins-bold;
+                margin-right: 12px;
+            }
+        }
+        &.group-daftar-harga-btn-action {
+        }
+
+        @include last-child {
+            border-bottom: 0;
+            margin-top: $getter;
+        }
+    }
+}

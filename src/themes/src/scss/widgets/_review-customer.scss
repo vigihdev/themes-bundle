@@ -1,0 +1,101 @@
+// review-customer
+.row.row-review-customer {
+    background: #d50000;
+    .review-customer-main-page {
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+        @include media-screen-min-max(xs, md) {
+            flex-direction: column;
+        }
+        .review-customer-page-title {
+            @include poppins-bold;
+            font-size: 1.7em;
+            padding: $getter;
+            color: $white;
+            .text-title {
+                border-bottom: 3px solid $white;
+            }
+        }
+        .review-customer-page-description {
+            color: $white;
+        }
+    }
+    .review-customer-list {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        @include hiddenScroll;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: $getter;
+        padding-right: $getter;
+    }
+}
+
+.review-customer-card {
+    background: $white;
+    @include BoxShadow(2);
+    @include border-radius(8px);
+    margin-right: 8px;
+    padding: $getter;
+    flex: 0 0 38%;
+    @include media-screen-min-max(xs, sm) {
+        flex: 0 0 100%;
+    }
+    @include media-screen-min-max(sm, md) {
+        flex: 0 0 70%;
+    }
+    .review-card-header {
+        margin-bottom: $getter;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .review-group-media {
+            @include border-radius(50%);
+            @include BoxShadow(1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid $primary-gannetrans;
+            padding: 4px;
+            margin-right: 8px;
+            flex: 0 0 85px;
+            .img-media {
+                @include border-radius(50%);
+                width: 100%;
+                object-fit: contain;
+                height: auto;
+            }
+        }
+        .review-group-content {
+            display: flex;
+            flex-direction: column;
+            .review-username {
+                @include poppins-bold;
+                margin-bottom: 4px;
+            }
+            .review-rating {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                .rating-star {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 8px;
+                    .material-icons-outlined {
+                        font-size: 18px;
+                    }
+                }
+                .rating-point {
+                    @include poppins-bold;
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+
+    .review-card-body {
+        font-size: 87%;
+    }
+}

@@ -1,0 +1,19 @@
+.back-to-top-widget {
+    position: fixed;
+    right: 0;
+    bottom: 70px;
+    .back-to-top-icon {
+        @include size(50px);
+        @include border-radius(50%);
+        @include centerFlex;
+        background: #ffffff;
+        border: 2px solid;
+        border-color: $warning;
+        margin: 8px;
+        @include BoxShadow(4);
+        .material-icons-outlined {
+            color: #ff6100;
+            font-weight: 700;
+        }
+    }
+}

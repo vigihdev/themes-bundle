@@ -1,0 +1,94 @@
+.form-group.form-group-rounded {
+    &.form-group-rounded-sm {
+        .input-group-prepend .input-group-text {
+            padding: 4px 8px;
+            .material-icons-outlined {
+                font-size: 20px;
+            }
+        }
+    }
+    &.form-group-rounded-filled {
+    }
+
+    .control-label {
+        padding: 0 8px;
+        @include poppins-bold;
+        display: flex;
+        align-items: center;
+        .label-text {
+        }
+        .label-required {
+            color: #dd2c00;
+            font-weight: bold;
+            margin-left: 4px;
+        }
+    }
+
+    .input-group {
+        .form-control {
+            background-color: transparent;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+
+    .input-group.input-group-rounded {
+        .input-group-prepend .input-group-text,
+        .form-control {
+            @include transition(border-color 0.3s ease-in-out);
+            border-style: solid;
+            border-width: 1.5px;
+            border-color: #dfdfdf;
+        }
+
+        .input-group-prepend .input-group-text {
+            background: none;
+            border-right: 0;
+            @include border-left-radius(16px);
+            padding: 0 8px;
+            padding-right: 0;
+            padding-left: 8px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .form-control {
+            @include border-right-radius(16px);
+            border-left: none;
+            padding-left: 4px;
+            font-size: 1em;
+            &::placeholder {
+                font-size: 85%;
+                color: $black;
+                opacity: 0.7;
+            }
+            &.form-control-sm {
+            }
+        }
+    }
+}
+
+// filled bg input
+.form-group.form-group-rounded-filled {
+    .input-group-prepend .input-group-text,
+    .form-control {
+        background: #f7f3ec !important;
+    }
+}
+
+// Theme Color
+@each $name, $value in $theme-colors {
+    .form-group.form-group-rounded.form-group.form-group-rounded-#{$name}.textfield-rounded-active {
+        .input-group.input-group-rounded {
+            .input-group-prepend .input-group-text {
+                border-color: $value;
+            }
+            .form-control {
+                border-color: $value;
+                border-left: none;
+            }
+        }
+    }
+}

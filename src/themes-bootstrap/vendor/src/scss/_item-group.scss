@@ -1,0 +1,16 @@
+.list-item-group {
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    border-bottom: 1px solid #d0d0d0;
+    .item-group.event {
+        @include center0Flex;
+        .material-icons,
+        .material-icons-outlined {
+            margin-right: 8px;
+        }
+        .item-label {
+            font-family: $font-family-roboto-bold;
+        }
+    }
+}

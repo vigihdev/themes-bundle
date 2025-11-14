@@ -1,0 +1,41 @@
+.post-terbaru-widget {
+    padding: 8px;
+    margin-bottom: 32px;
+    border-radius: 8px;
+    position: relative;
+    display: block;
+    .post-terbaru-widget-title {
+        position: relative;
+        display: block;
+        width: 100%;
+        &::before {
+            @include sidebar-before-widget-title;
+        }
+        .widget-title {
+            @include sidebar-widget-title;
+        }
+    }
+
+    .post-terbaru-card {
+        display: flex;
+        margin-bottom: 12px;
+        background: #fff;
+        align-items: center;
+        @include BoxShadow(2);
+        @include border-radius(8px);
+        @include media-screen-min-max(xs, sm) {
+        }
+        @include media-screen-min-max(sm, md) {
+        }
+        &:first-child {
+            margin-top: 32px;
+        }
+    }
+    .post-terbaru-body {
+        .post-terbaru-title {
+            .text-title {
+                @include poppins-semibold;
+            }
+        }
+    }
+}

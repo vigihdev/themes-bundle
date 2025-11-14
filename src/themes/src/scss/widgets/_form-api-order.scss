@@ -1,0 +1,14 @@
+.container.container-form-api-order {
+    width: 95%;
+    .row.form-api-order {
+        @include BoxShadow(2);
+        @include border-radius(8px);
+        background: #fffcf8;
+        padding-top: $getter;
+        padding-bottom: $getter;
+        @include media-screen-min-max(xs, sm) {
+        }
+        @include media-screen-min-max(sm, md) {
+        }
+    }
+}

@@ -1,0 +1,209 @@
+.container-date-time-picker {
+  position: absolute;
+  z-index: 1000;
+}
+
+.backdrop-date-time-picker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.5;
+  opacity: 0.6;
+}
+
+.tempus-dominus-widget.bootstrap {
+  width: 350px;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2)) drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.14)) drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12));
+  border-radius: 8px;
+  border: 0;
+  padding-top: 0;
+}
+.tempus-dominus-widget.bootstrap .date-container .calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  padding: 12px;
+  margin-left: -6px;
+  margin-right: -6px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.tempus-dominus-widget.bootstrap .date-container .calendar-header [data-action] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.tempus-dominus-widget.bootstrap .date-container .calendar-header .material-icons,
+.tempus-dominus-widget.bootstrap .date-container .calendar-header .material-icons-outlined {
+  font-size: 32px;
+  color: #000000;
+}
+.tempus-dominus-widget.bootstrap .date-container .calendar-header .picker-switch {
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.tempus-dominus-widget.bootstrap .date-container .date-container-days {
+  grid-auto-rows: 48px;
+}
+.tempus-dominus-widget.bootstrap .date-container .date-container-days .dow.no-highlight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000000;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #c2c2c2;
+}
+.tempus-dominus-widget.bootstrap .date-container .date-container-days .dow.no-highlight:first-child {
+  color: #ff3d00;
+}
+.tempus-dominus-widget.bootstrap .date-container .date-container-days .day.weekend:not(.active) {
+  color: #ff3d00;
+}
+.tempus-dominus-widget.bootstrap .date-container .date-container-days .day {
+  width: 40px;
+  height: 40px;
+  font-family: "Roboto Medium";
+  color: #000000;
+  font-size: 1em;
+}
+.tempus-dominus-widget.bootstrap .date-container .date-container-days .day.active {
+  background-color: #cc0000;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.tempus-dominus-widget.bootstrap [tabindex="-1"] {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none !important;
+  /* iOS Safari */
+  -webkit-user-select: none !important;
+  /* Safari */
+  -khtml-user-select: none !important;
+  /* Konqueror HTML */
+  -moz-user-select: none !important;
+  /* Firefox */
+  -ms-user-select: none !important;
+  /* Internet Explorer/Edge */
+  user-select: none !important;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.tempus-dominus-widget.bootstrap [tabindex="-1"]::selection {
+  background: transparent;
+}
+.tempus-dominus-widget.bootstrap [tabindex="-1"]::-moz-selection {
+  background: transparent;
+}
+.tempus-dominus-widget.bootstrap [tabindex="-1"], .tempus-dominus-widget.bootstrap [tabindex="-1"]:hover, .tempus-dominus-widget.bootstrap [tabindex="-1"]:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock {
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none !important;
+  /* iOS Safari */
+  -webkit-user-select: none !important;
+  /* Safari */
+  -khtml-user-select: none !important;
+  /* Konqueror HTML */
+  -moz-user-select: none !important;
+  /* Firefox */
+  -ms-user-select: none !important;
+  /* Internet Explorer/Edge */
+  user-select: none !important;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock::selection {
+  background: transparent;
+}
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock::-moz-selection {
+  background: transparent;
+}
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=incrementMinutes] .material-icons,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=incrementMinutes] .material-icons-outlined,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=incrementHours] .material-icons,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=incrementHours] .material-icons-outlined,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=decrementHours] .material-icons,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=decrementHours] .material-icons-outlined,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=decrementMinutes] .material-icons,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=decrementMinutes] .material-icons-outlined {
+  font-size: 32px;
+  font-weight: 700;
+}
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=incrementMinutes]:hover, .tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=incrementMinutes]:focus,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=incrementHours]:hover,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=incrementHours]:focus,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=decrementHours]:hover,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=decrementHours]:focus,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=decrementMinutes]:hover,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=decrementMinutes]:focus {
+  background: #cc0000;
+  color: #ffffff;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=showHours],
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=showMinutes] {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=showHours],
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=decrementHours],
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=showMinutes] {
+  font-size: 1.3em;
+  color: #000;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+}
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=showHours]:hover,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=decrementHours]:hover,
+.tempus-dominus-widget.bootstrap .time-container .time-container-clock [data-action=showMinutes]:hover {
+  background: #cc0000;
+  color: #ffffff;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.tempus-dominus-widget.bootstrap .toolbar .btn-action-date-time-picker {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 16px;
+}
+.tempus-dominus-widget.bootstrap .toolbar .btn-action-date-time-picker:hover {
+  background: none;
+}
+.tempus-dominus-widget.bootstrap .toolbar .btn-action-date-time-picker .btn-close {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.date-time-picker-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1071;
+  background-color: #000;
+}
+.date-time-picker-backdrop.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.date-time-picker-backdrop.show {
+  opacity: 0.5;
+}

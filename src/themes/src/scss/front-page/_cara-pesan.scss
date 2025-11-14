@@ -1,0 +1,71 @@
+// <reference path="/front-page/cara-pesan.php"/>
+
+.row.row-cara-pesan {
+    background: #fff;
+    align-items: center;
+}
+
+.cara-pesan-card {
+    margin-bottom: $getter;
+    .cara-pesan-group {
+        display: flex;
+        align-items: center;
+        padding: $getter;
+        .item-group.item-group-number {
+            .item-numbered {
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-right: 12px;
+                @include size(32px);
+                @include border-radius(50%);
+                @include BoxShadow(1);
+                background: #dd2c00;
+                .text-number {
+                    @include poppins-bold;
+                    font-size: 1.2em;
+                    color: #fff;
+                }
+            }
+        }
+        .item-group.item-group-list {
+            .item-title {
+                @include poppins-bold;
+                font-size: 1.2em;
+                color: $black;
+                margin-bottom: 8px;
+            }
+            .item-description {
+                display: none;
+                font-size: 90%;
+            }
+        }
+    }
+    // active
+    &.active {
+        @include BoxShadow(2);
+        @include border-radius(8px);
+        background: $secondary-gannetrans;
+
+        .item-group.item-group-number {
+            .item-numbered {
+                background: #fff;
+                .text-number {
+                    color: $secondary-gannetrans;
+                }
+            }
+        }
+        .item-group.item-group-list {
+            .item-title,
+            .item-description {
+                color: #fff;
+                margin-bottom: 8px;
+            }
+            .item-description {
+                display: block;
+            }
+        }
+    }
+}

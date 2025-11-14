@@ -1,0 +1,18 @@
+.box {
+    padding: 0.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    @include BoxShadow(2);
+    @include border-radius(8px);
+    background-color: $white;
+
+    .box-header {
+    }
+    .box-body {
+    }
+    .box-footer {
+    }
+}

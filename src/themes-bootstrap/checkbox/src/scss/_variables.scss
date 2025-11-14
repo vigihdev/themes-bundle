@@ -1,0 +1,15 @@
+// Checkbox
+// Checkbox Switch
+
+$checkbox-transition-background-color: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !default;
+$checkbox-transition-transform: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms !default;
+$checkbox-transition-color: color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !default;
+$checkbox-transition-fill: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !default;
+$checkbox-transition-fillAndColor: $checkbox-transition-fill, $checkbox-transition-color !default;
+$checkbox-width: 40px;
+
+$switch-currentcolor: rgb(224, 224, 224) !default;
+$switch-shadow: 0px 0px 0px 8px !default;
+$switch-thumb-width: 20px !default;
+$switch-thumb-transition-duration: 150ms !default;
+$switch-thumb-ripple-width: 36px !default;

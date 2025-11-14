@@ -1,0 +1,80 @@
+// <reference path="/front-page/question.php"/>
+
+.question {
+    .row.row-question {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        background: #ffffff;
+        align-items: center;
+        .col-question-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .question-title {
+                @include poppins-bold;
+                font-size: 1.7em;
+                text-align: center;
+                margin-bottom: 24px;
+            }
+            .question-description {
+                font-size: 85%;
+                margin-bottom: 24px;
+            }
+            .question-action {
+            }
+        }
+
+        .question-card {
+            padding: 12px;
+            margin-bottom: $getter;
+            @include BoxShadow(2);
+            @include border-radius(8px);
+            .collapse-group {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .question-text {
+                    @include poppins-bold;
+                    font-size: 1em;
+                }
+                .material-icons-outlined {
+                    color: $black;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .answer-group {
+                margin-top: $getter;
+                border-bottom: 1px solid #d0d0d0;
+                padding-bottom: 8px;
+                margin-left: 16px;
+                &:last-child {
+                    border-bottom: 0;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+                .answer-text {
+                    font-size: 90%;
+                    margin-bottom: 8px;
+                }
+                .answer-group-text {
+                    display: flex;
+                    border-bottom: 1px solid #d0d0d0;
+                    margin-bottom: 12px;
+                    &:last-child {
+                        border-bottom: 0;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                    }
+                    .answer-number {
+                        color: $black;
+                        flex: 0 0 16px;
+                    }
+                }
+            }
+        }
+    }
+}

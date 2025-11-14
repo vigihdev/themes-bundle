@@ -1,0 +1,40 @@
+// artikel-terkait-widget
+.artikel-terkait-widget {
+    margin-bottom: 32px;
+
+    .artikel-terkait-widget-title {
+        .widget-title {
+        }
+    }
+    .artikel-terkait-widget-content {
+        display: flex;
+        flex-wrap: wrap;
+        .artikel-terkait-widget-card {
+            display: flex;
+            flex-direction: column;
+            @include BoxShadow(2);
+            @include border-radius(8px);
+            margin-bottom: 12px;
+            padding: 12px;
+            margin-right: 8px;
+            flex: 0 0 calc((100% / 3) - 8px);
+            background: #fff;
+            @include media-screen-min-max(xs, sm) {
+                flex: 0 0 calc((100% / 1) - 8px);
+            }
+            @include media-screen-min-max(sm, md) {
+                flex: 0 0 calc((100% / 2) - 8px);
+            }
+
+            .artikel-terkait-widget-media {
+                margin-bottom: $getter;
+                .img-media {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 1 auto;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@mixin sidebar-widget-title {
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    @include transform-translateX(-50%);
+    @include border-radius(4px);
+    @include poppins-medium;
+    @include BoxShadow(2);
+    z-index: 2;
+    padding: 4px 8px;
+    background: #cc0000;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+@mixin sidebar-before-widget-title {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    height: 3px;
+    right: 15px;
+    left: 15px;
+    @include centerYY;
+    background: #ffc107;
+}

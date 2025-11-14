@@ -1,0 +1,66 @@
+.fast-response-widget {
+    background: url($base-url-images + "/fast-response/shareit.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #ffc107;
+    padding: 8px;
+    margin-bottom: 32px;
+    border-radius: 8px;
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    .fast-response-widget-title {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        @include transform-translateX(-50%);
+        border-radius: 4px;
+        background: #c00;
+        .widget-title {
+            color: #fff;
+            font-size: 1.1em;
+            padding: 4px 8px;
+            margin: 0;
+            @include poppins-bold;
+        }
+    }
+
+    .fast-response-group {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+
+        &.group-phone,
+        &.group-whatsapp,
+        &.group-email {
+            .fast-response-icon {
+                background: #fff;
+                padding: 10px;
+                @include border-radius(50%);
+                @include BoxShadow(2);
+            }
+        }
+        &.group-whatsapp {
+            .fast-response-icon {
+                background: #25d366;
+            }
+        }
+        .group-phone {
+        }
+        .group-whatsapp {
+        }
+        .group-email {
+        }
+
+        .fast-response-icon {
+            margin-right: 8px;
+        }
+        .fast-response-text {
+            .text-content {
+                @include poppins-bold;
+            }
+        }
+    }
+}

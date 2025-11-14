@@ -1,0 +1,17 @@
+@include media-screen-max(md) {
+    .row-md-0 {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .container-fluid-md-0,
+    .col-md-0,
+    .container-md-0 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .container-md-full {
+        max-width: map-get($grid-breakpoints, "md");
+    }
+}

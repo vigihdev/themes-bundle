@@ -1,0 +1,121 @@
+@keyframes rotation {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.loader-spinner {
+  display: block;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  z-index: 3000;
+  width: 100%;
+}
+.loader-spinner .spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loader-spinner .spinner-container .spinner-center {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #ffc107;
+  border-bottom-color: #dc3545;
+  background: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  z-index: 4000;
+  background-color: #fff;
+}
+
+.backdrop-loader-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+@keyframes rotation {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.loader-circle {
+  border-radius: 50%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  width: 48px;
+  height: 48px;
+  border: 5px solid;
+  background: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader-circle-primary {
+  border-color: #b90000;
+  border-bottom-color: #fff;
+  border-bottom-color: #ffce0a;
+}
+
+.loader-circle-secondary {
+  border-color: #ffce0a;
+  border-bottom-color: #212529;
+  border-bottom-color: #b90000;
+}
+
+.loader-circle-success {
+  border-color: #28a745;
+  border-bottom-color: #fff;
+}
+
+.loader-circle-info {
+  border-color: #17a2b8;
+  border-bottom-color: #fff;
+}
+
+.loader-circle-warning {
+  border-color: #ffc107;
+  border-bottom-color: #212529;
+}
+
+.loader-circle-danger {
+  border-color: #dc3545;
+  border-bottom-color: #fff;
+}
+
+.loader-circle-light {
+  border-color: #f8f9fa;
+  border-bottom-color: #212529;
+}
+
+.loader-circle-dark {
+  border-color: #343a40;
+  border-bottom-color: #fff;
+}

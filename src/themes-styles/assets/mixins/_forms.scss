@@ -1,0 +1,64 @@
+// Disable selection
+@mixin disable-selection {
+	-webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Safari */
+    -khtml-user-select: none;    /* Konqueror HTML */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+@mixin textfield-outline-label-active(){
+	.textfield-outline-left, .textfield-outline-middle, .textfield-outline-right {
+	 	border-top:$border-outline-active;
+	 	border-bottom:$border-outline-active;
+	}
+	.textfield-outline-left {
+	 	border-left:$border-outline-active;
+	}
+	.textfield-outline-right {
+	 	border-right: $border-outline-active;
+	}
+	.textfield-outline-middle {
+	 	border-top:none;
+	}
+}
+
+@mixin textfield-outline-middle($border){
+	.textfield-outline-wrapper .textfield-label-wrapper .textfield-outline-middle {
+		border-top: $border;
+	}	
+}
+@mixin textfield-outline-wrapper(){
+	.textfield-outline-left, .textfield-outline-middle, .textfield-outline-right {
+		height: 100%;
+		box-sizing: border-box;
+		pointer-events: none;
+		border-top: $textfield-border-outline;
+		border-bottom: $textfield-border-outline;
+		transition: $textfield-transition-border;
+
+	}
+
+	.textfield-outline-left {
+		width: 8px;
+		border-right: none;
+		border-left: $textfield-border-outline;
+		border-radius: $textfield-border-outline-radius 0 0 $textfield-border-outline-radius;
+	}
+	
+	.textfield-outline-middle {
+		padding-right: $textfield-border-outline-radius;
+		padding-left: $textfield-border-outline-radius;
+		border-top:none;
+	}
+
+	.textfield-outline-right {
+		border-right: $textfield-border-outline;
+		border-left: none;
+		border-radius: 0 $textfield-border-outline-radius $textfield-border-outline-radius 0;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+	}	
+}

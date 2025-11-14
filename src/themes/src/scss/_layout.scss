@@ -1,0 +1,23 @@
+#wrapper {
+    margin-bottom: 32px;
+
+    #container {
+        .col-main {
+            @include BoxShadow(2);
+            @include border-radius(8px);
+            padding-top: $getter;
+            background: #fff;
+            .post {
+                padding-bottom: 16px;
+            }
+        }
+    }
+}
+
+.col-sidebar {
+    @include media-screen-min-max(xs, sm) {
+    }
+    @include media-screen-min-max(xs, md) {
+        margin-top: 32px;
+    }
+}

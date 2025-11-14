@@ -1,0 +1,59 @@
+.gm-style-iw-chr {
+  display: none !important;
+}
+
+.gm-style-iw.gm-style-iw-c {
+  max-height: inherit !important;
+}
+
+.gm-style-iw-t,
+.gm-style-iw-d {
+  height: inherit !important;
+  max-height: inherit !important;
+}
+
+.google-map-infowindow {
+  padding-top: 12px;
+}
+.google-map-infowindow .infowindow-title {
+  margin-bottom: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+}
+.google-map-infowindow .infowindow-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.google-map-infowindow .infowindow-media .img-media {
+  width: 240px;
+  height: 120px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.google-map-infowindow .infowindow-rating {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 8px;
+}
+.google-map-infowindow .infowindow-rating .infowindow-rating-sum,
+.google-map-infowindow .infowindow-rating .infowindow-rating-ulasan {
+  font-size: 12px;
+  color: #343a40;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.google-map-infowindow .infowindow-rating .infowindow-rating-icon {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-right: 8px;
+}
+.google-map-infowindow .infowindow-rating .infowindow-rating-icon .material-icons-outlined {
+  font-size: 16px;
+}

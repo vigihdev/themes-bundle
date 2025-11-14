@@ -1,0 +1,151 @@
+.btn {
+	font-weight: $font-weight-bold;
+	text-transform: capitalize;
+	@include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+	@include transition($btn-transition);
+	@include BoxShadow(2);
+	@include border-radius(8px);
+	&:active,
+	&.active {
+		box-shadow: none;
+	}
+	&:hover,
+	&.active.focus,
+	&.active:focus,
+	&.focus,
+	&:active.focus,
+	&:active:focus,
+	&:focus {
+		outline: 0;
+		outline-offset: 0;
+		border-color: transparent;
+		outline: none;
+	}
+
+	// Buttons raised
+	&.btn-raised {
+		@include box-shadow-depth(1);
+		&:active,
+		&:focus,
+		&.active,
+		&:active:focus,
+		&.active:focus {
+			@include box-shadow-depth(2);
+		}
+	}
+
+	// Buttons circle
+	&.btn-fab {
+		padding: 0;
+		border-radius: 50%;
+		&:focus {
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+			@include BoxShadow(2);
+		}
+		@include fab-button-size($btn-fab-size);
+		&.btn-lg {
+			@include fab-button-size($btn-fab-size-lg);
+		}
+		&.btn-sm {
+			@include fab-button-size($btn-fab-size-sm);
+		}
+
+		&.btn-xs {
+			@include fab-button-size($btn-fab-size-xs);
+		}
+	}
+}
+
+// Buttons colors
+@each $color, $value in $theme-colors {
+	.btn-#{$color} {
+		@include button-variant($value, $value);
+	}
+
+	.btn-default.btn-flat.btn-#{$color} {
+		color: $value;
+		@include BoxShadow(1);
+	}
+}
+
+.btn-thrubus {
+	padding: 0.6rem !important;
+	@include BoxShadow(3);
+}
+
+.btn-default {
+	&.btn-flat {
+		color: color-yiq(theme-color("light"));
+		box-shadow: none;
+	}
+	&.btn-outline {
+		color: color-yiq(theme-color("light"));
+		border-color: color-yiq(theme-color("light"));
+		&:hover,
+		&:focus {
+			border-color: color-yiq(theme-color("light"));
+		}
+	}
+}
+
+// Button Sizes
+.btn-lg {
+	@include button-size(
+		$btn-padding-y-lg,
+		$btn-padding-x-lg,
+		$btn-font-size-lg,
+		$btn-line-height-lg,
+		$btn-border-radius-lg
+	);
+}
+.btn-sm {
+	@include button-size(
+		$btn-padding-y-sm,
+		$btn-padding-x-sm,
+		$btn-font-size-sm,
+		$btn-line-height-sm,
+		$btn-border-radius-sm
+	);
+}
+
+// Button groups
+.btn-group .btn {
+	border-radius: 2px;
+}
+.btn-group.open .dropdown-toggle {
+	outline: 0;
+	outline-offset: 0;
+	box-shadow: none;
+}
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group,
+.btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-group {
+	margin-left: 0;
+}
+.btn-group > .btn:hover,
+.btn-group-vertical > .btn:hover {
+	z-index: 0;
+}
+.btn-group > .btn:focus:hover,
+.btn-group-vertical > .btn:focus:hover,
+.btn-group > .btn:active:hover,
+.btn-group-vertical > .btn:active:hover,
+.btn-group > .btn.active:hover,
+.btn-group-vertical > .btn.active:hover {
+	z-index: 2;
+}
+
+// fab
+.btn-fab {
+	&.fab-action {
+		&.footer-right {
+			position: fixed;
+			z-index: 2000;
+			right: 0;
+			bottom: 60px;
+		}
+	}
+}

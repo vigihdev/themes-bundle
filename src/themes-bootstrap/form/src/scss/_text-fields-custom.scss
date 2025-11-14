@@ -1,0 +1,71 @@
+// TextArea
+.textfield textarea{
+    &.form-control{
+        line-height: 1.2em;
+        font-size: 1em;
+        padding: $getter;
+    }
+}
+
+.add-tujuan{
+	display: flex;
+	align-items: center;
+	margin-bottom: math.div($getter,1);
+    justify-content: flex-end;
+    .add-text{
+        margin-right: 8px;
+        @include user-select-none();
+    }
+	.material-icons{
+		flex: 0 40px;
+		height: 40px;
+		background-color: #ffe9a7;
+		margin-right: math.div($getter,2);
+        @include user-select-none();
+		@include BoxShadow(2);
+		@include centerFlex;
+		@include border-radius(50%);
+	}
+}
+
+.input-group-outline-custom{
+	.form-control.form-control-sm{
+		padding-right: 90px
+	}
+	.input-group-append.custom-append-address-picker{
+		display: flex;
+		align-items:center;
+		background-color: #ffe9a7;
+		font-size: .9em;
+		.input-group-text{
+			@include centerFlex;
+			flex: 0 40px;
+			height: $input-height-sm;
+			padding: 0 math.div($getter,2);
+			.material-icons{
+				@include centerFlex;
+			}
+		}
+		.input-group-label-text{
+			padding-right: math.div($getter,2);
+		}
+	}
+}
+
+//
+@mixin textfield-label-wrapper{
+	.textfield-outline-wrapper {
+		.textfield-label-wrapper {
+			.textfield-outline-left,
+			.textfield-outline-middle,
+			.textfield-outline-right{
+				@content;
+			}
+		}
+	}
+}
+.input-group-outline.textfield-readonly{
+	@include textfield-label-wrapper{
+		background: #f4f4f4;
+	}
+}

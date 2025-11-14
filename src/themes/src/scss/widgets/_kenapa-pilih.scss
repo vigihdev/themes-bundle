@@ -1,0 +1,87 @@
+// <reference path="/front-page/kenapa-pilih.php"/>
+
+// KenapaPilih
+.row.row-kenapa-pilih {
+    background: #fff;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    .kenapa-pilih-main-page {
+        display: flex;
+        align-items: center;
+        flex: auto;
+        @include media-screen-min-max(xs, md) {
+            flex-direction: column;
+        }
+        .kenapa-pilih-page-title {
+            @include poppins-bold;
+            font-size: 1.8em;
+            margin-bottom: $getter;
+        }
+        .kenapa-pilih-page-description {
+            font-size: 80%;
+            margin-bottom: $getter;
+        }
+    }
+    .list-kenapa-pilih {
+        display: flex;
+        flex-wrap: wrap;
+        padding: $getter;
+    }
+}
+.kenapa-pilih-card {
+    @include BoxShadow(2);
+    @include border-bottom-radius(8px);
+    padding: 12px;
+    margin-bottom: $getter;
+    flex: 0 0 calc((100% / 3) - 16px);
+    margin-right: $getter;
+    @include media-screen-min-max(xs, sm) {
+        flex: 0 0 calc((100% / 1) - 8px);
+    }
+    @include media-screen-min-max(sm, md) {
+        flex: 0 0 calc((100% / 2) - 8px);
+    }
+    .card-media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: $getter;
+        padding-top: $getter;
+        .media-object {
+            flex: 0 0 130px;
+            @include border-radius(12px);
+            @include BoxShadow(2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            &.media-object-0 {
+                background: #ff6500;
+            }
+            &.media-object-1 {
+                background: #292d32;
+            }
+            &.media-object-2 {
+                background: #ff6500;
+            }
+            .img-media {
+                object-fit: contain;
+                aspect-ratio: 1 auto;
+                width: 80%;
+            }
+        }
+    }
+
+    .text-title {
+        @include poppins-bold;
+        font-size: 1.2em;
+        text-align: center;
+        margin-bottom: $getter;
+    }
+    .text-description {
+        font-size: 90%;
+        line-height: 20px;
+    }
+}

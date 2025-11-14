@@ -1,0 +1,60 @@
+// <reference path="/front-page/layanan-kami.php"/>
+// <reference path="/vendor/vigihdev/wp-widgets/src/Cards/LayananKamiCard.php"/>
+.row.row-layanan-kami {
+    background: #f4e6e6;
+    .layanan-kami-page-title {
+        @include poppins-bold;
+        font-size: 1.7em;
+        padding: $getter;
+        .text-title {
+            border-bottom: 5px solid #cc0000;
+        }
+    }
+    .layanan-kami-page-description {
+        margin-bottom: 32px;
+    }
+    .list-layanan-kami {
+        display: flex;
+        flex-wrap: wrap;
+        padding: $getter;
+    }
+}
+
+.layanan-kami-card {
+    display: flex;
+    flex-direction: column;
+    @include BoxShadow(2);
+    @include border-radius(8px);
+    margin-bottom: 12px;
+    padding: 12px;
+    margin-right: 8px;
+    flex: 0 0 calc((100% / 3) - 8px);
+    background: #fff;
+    @include media-screen-min-max(xs, sm) {
+        flex: 0 0 calc((100% / 1) - 8px);
+    }
+    @include media-screen-min-max(sm, md) {
+        flex: 0 0 calc((100% / 2) - 8px);
+    }
+
+    .layanan-kami-media {
+        margin-bottom: $getter;
+        .img-media {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 auto;
+            object-fit: contain;
+        }
+    }
+    .layanan-kami-title {
+        text-align: center;
+        @include poppins-semibold;
+        font-size: 1.2em;
+        margin-bottom: $getter;
+        color: $black;
+    }
+    .layanan-kami-description {
+        font-size: 90%;
+        line-height: 22px;
+    }
+}

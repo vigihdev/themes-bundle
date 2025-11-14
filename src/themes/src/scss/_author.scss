@@ -1,0 +1,30 @@
+// author.scss
+
+.col-author {
+    .page-title.author {
+        padding: $getter;
+    }
+    .post {
+        padding: $getter;
+        margin-bottom: $getter;
+        background-color: #fff;
+        @include BoxShadow(2);
+        @include border-radius(8px);
+
+        .entry-title,
+        .entry-meta,
+        .entry-summary,
+        .entry-utility {
+            margin-bottom: 8px;
+        }
+
+        .entry-title {
+        }
+        .entry-meta {
+        }
+        .entry-summary {
+        }
+        .entry-utility {
+        }
+    }
+}

@@ -1,0 +1,26 @@
+
+// Ripple effect 
+.ripple-effect { 
+	position: relative; 
+	overflow: hidden; 
+	-webkit-transform: translate3d(0, 0, 0);
+}
+.ink { 
+	display: block; 
+	position: absolute; 
+	pointer-events: none; 
+	border-radius: 50%; 
+	-ms-transform: scale(0); 
+	transform: scale(0); 
+	background: #fff; 
+	opacity: 1;
+	&.animate { 
+		animation: ripple .5s linear;
+	}
+}
+@keyframes ripple {
+	100% { 
+		opacity: 0; 
+		transform: scale(2.5);
+	}
+}

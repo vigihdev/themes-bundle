@@ -1,0 +1,43 @@
+// <reference path="/vendor/vigihdev/wp-widgets/src/QuickLink/RandomPost.php"/>
+
+.random-posts-item {
+    display: flex;
+    flex-wrap: nowrap;
+    border: 1px solid #444242;
+    @include border-radius(8px);
+    .random-posts-media {
+        flex: 0 0 100px;
+        @include BoxShadow(2);
+        .img-media {
+            width: 100%;
+            object-fit: contain;
+            aspect-ratio: 1 auto;
+            @include border-left-radius(8px);
+            @include BoxShadow(2);
+        }
+    }
+    .random-posts-group {
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+        padding: 12px;
+        .random-posts-title {
+            color: #d2cdcd;
+            @include poppins-medium;
+            line-height: 18px;
+            @include transition(color 0.15s ease-in-out);
+            padding-bottom: 8px;
+            @include hover {
+                color: #088a8f;
+            }
+        }
+        .random-posts-divider {
+            border-bottom: 1px solid #444242;
+        }
+        .random-posts-snippet {
+            @include poppins-regular;
+            color: #b3b3b3;
+            font-size: 90%;
+        }
+    }
+}

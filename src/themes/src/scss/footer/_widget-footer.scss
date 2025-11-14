@@ -1,0 +1,80 @@
+// <reference path="/parts/footer-widget.php"/>
+
+.footer-widget {
+    background: #201f1d;
+    padding: $getter;
+    color: #fff;
+    .widget-title {
+        // @include widget-title-footer;
+    }
+
+    .col-about-us {
+        display: flex;
+        flex-direction: column;
+        .widget-content {
+            display: flex;
+            flex-direction: column;
+            .img-logo {
+                max-width: 180px;
+                background: #fff;
+                padding: 8px;
+                @include border-radius(8px);
+                @include BoxShadow(2);
+                margin-bottom: $getter;
+            }
+            .text-content {
+                color: #d5d5d5;
+                font-size: 90%;
+            }
+        }
+    }
+
+    .col-contact-connect {
+        .col-contact-info {
+            .widget-content {
+                .contact-info-items {
+                    .contact-info-group {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: nowrap;
+                        margin-bottom: 8px;
+                        .contact-info-icon {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 50%;
+                            object-fit: contain;
+                            @include BoxShadow(3);
+                            margin-right: 8px;
+                            &.call {
+                                background: $warning;
+                                padding: 4px;
+                                border: 1px solid #ff6100;
+                            }
+                        }
+                        .contact-info-text {
+                            @include poppins-medium;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        .col-connect-with-us {
+            .widget-content {
+                .connect-with-us-items {
+                    display: flex;
+                    flex-wrap: wrap;
+                    img {
+                        margin-right: 8px;
+                        @include size(32px);
+                        @include transition(border 0.15s ease-in-out);
+                        @include hover {
+                            border: 2px solid #fff;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

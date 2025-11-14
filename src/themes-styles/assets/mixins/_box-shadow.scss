@@ -1,0 +1,15 @@
+@mixin box-shadow($shadow...) {
+  box-shadow: $shadow;
+}
+
+@mixin box-shadow-depth($depth) {
+  -moz-box-shadow: box-shadow($depth);
+  -webkit-box-shadow: box-shadow($depth);
+  box-shadow: box-shadow($depth);
+}
+
+@mixin box-shadow-depth1($top: 0px, $left: 0px, $blur: 0px, $size: 0px, $color: rgba(0, 0, 0, 0.06)) {
+  box-shadow: $top $left $blur $size $color;
+  -moz-box-shadow: $top $left $blur $size $color;
+  -webkit-box-shadow: $top $left $blur $size $color;
+}

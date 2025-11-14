@@ -1,0 +1,144 @@
+@mixin radioContainer() {
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    background-color: transparent;
+    outline: 0px;
+    border: 0px none;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    padding: 9px;
+    border-radius: 50%;
+}
+
+@mixin radioInput() {
+    cursor: inherit;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+@mixin svgIcon() {
+    @include user-select-none();
+    @include size(1em);
+    font-size: 1.5rem;
+    display: inline-block;
+    fill: currentColor;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.radio-group {
+    label.form-label {
+        font-weight: 700;
+        color: #000000;
+        font-family: $font-family-roboto-bold;
+    }
+    .radio-item {
+        display: inline-flex;
+        align-items: center;
+        .radio-item-container {
+            @include radioContainer();
+            input {
+                @include radioInput();
+                @include user-select-none();
+                margin-bottom: 0;
+                font-weight: $font-weight-bolds;
+            }
+            .radio-item-thumb {
+                display: inline-flex;
+                position: relative;
+                svg.radio-svg-icon {
+                    @include svgIcon();
+                    @include transition($radio-transition-background-color);
+                    @include transition($radio-transition-transform);
+                }
+                svg.radio-item-unchecked-icon {
+                    @include transform-scale(1);
+                    cursor: pointer;
+                }
+                svg.radio-item-checked-icon {
+                    left: 0px;
+                    position: absolute;
+                    @include transform-scale(0);
+                }
+            }
+        }
+        label {
+            font-weight: 700;
+        }
+    }
+}
+
+// Layout inline
+
+.radio-group.radio-group-inline {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    label.form-label {
+        margin-right: 16px;
+    }
+}
+
+// Layout List
+.radio-group.radio-group-list {
+    display: flex;
+    flex-direction: column;
+    label.form-label {
+        margin-left: 16px;
+    }
+}
+
+// Layout label-inline
+.radio-group.radio-group-label-inline {
+    label.form-label {
+        display: block;
+        margin-left: 16px;
+    }
+}
+
+@each $theme, $value in $theme-colors {
+    .radio-item.radio-item-#{$theme} {
+        .radio-item-container {
+            @include hover-focus-active {
+                background-color: rgba($value, 0.1);
+            }
+        }
+        &.checked {
+            .radio-item-container {
+                color: rgba($value, 0.7);
+                .radio-item-thumb {
+                    svg.radio-item-checked-icon {
+                        @include transform-scale(1);
+                        color: $value;
+                    }
+                }
+            }
+            label {
+                color: $value;
+            }
+        }
+        &.hover,
+        &.active {
+            .radio-item-container {
+                background-color: rgba($value, 0.1);
+            }
+        }
+    }
+}

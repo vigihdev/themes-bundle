@@ -1,0 +1,38 @@
+.row.row-destinasi-travel {
+    display: flex;
+    background: #d50000;
+    .destinasi-travel-page-title {
+        @include poppins-bold;
+        font-size: 1.7em;
+        padding: $getter;
+        color: $primary-gannetrans;
+        text-align: center;
+    }
+    .list-destinasi-travel {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        .destinasi-travel-owl-carousel {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: $getter;
+            @include hiddenScroll();
+
+            .item-media {
+                flex: 0 0 50%;
+                margin-right: 10px;
+                @include BoxShadow(2);
+                @include border-radius(8px);
+                .img-media {
+                    object-fit: contain;
+                    @include BoxShadow(2);
+                    @include border-radius(8px);
+                    aspect-ratio: 1 auto;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

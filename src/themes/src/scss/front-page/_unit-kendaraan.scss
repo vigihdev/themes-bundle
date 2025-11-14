@@ -1,0 +1,61 @@
+// <reference path="/front-page/unit-kendaraan.php"/>
+
+.row-unit-kendaraan {
+    background: #fff;
+    .unit-kendaraan-page-title {
+        @include poppins-bold;
+        font-size: 1.7em;
+        padding: $getter;
+        .text-title {
+            border-bottom: 5px solid #cc0000;
+        }
+    }
+    .unit-kendaraan-page-description {
+        margin-bottom: 32px;
+    }
+    .list-unit-kendaraan {
+        display: flex;
+        flex-wrap: wrap;
+        padding: $getter;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.listing-mobil-paket-card {
+    margin-right: 16px;
+    @include BoxShadow(2);
+    @include border-radius(8px);
+    margin-bottom: 16px;
+    background: #fff;
+    .list-item {
+        &.nama-mobil {
+            @include poppins-bold;
+            font-size: 1.2em;
+            color: $black;
+            padding: 8px;
+            border-bottom: 1px solid #d6d6d6;
+            padding: 8px;
+        }
+    }
+    .list-groups {
+        .list-paket-harga {
+            border-bottom: 1px solid #d6d6d6;
+            padding: 8px;
+
+            .text-harga {
+                color: scss-$success;
+                @include poppins-bold;
+                margin-right: 12px;
+            }
+            .text-paket {
+                font-size: 80%;
+            }
+
+            @include last-child {
+                border-bottom: 0;
+                margin-bottom: $getter;
+            }
+        }
+    }
+}

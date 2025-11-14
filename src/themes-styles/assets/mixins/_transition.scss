@@ -1,0 +1,84 @@
+@mixin transition($transition...) {
+	@if length($transition) == 0 {
+		transition: $transition-base;
+	} @else {
+		-webkit-transition: $transition;
+		-moz-transition: $transition;
+		-o-transition: $transition;
+		transition: $transition;
+	}
+}
+
+@mixin transitions($property, $duration, $ms: false) {
+	-webkit-transition: $property $duration ease-in-out;
+	-moz-transition: $property $duration ease-in-out;
+	-o-transition: $property $duration ease-in-out;
+	@if ($ms) {
+		-ms-transition: $property $duration ease-in-out;
+	}
+	transition: $property $duration ease-in-out;
+}
+
+@mixin transitionLong($property, $duration, $easing: ease-in-out, $delay: false) {
+	@include transitionProperty($property);
+	@include transitionDuration($duration);
+
+	@if ($delay) {
+		@include transitionDelay($delay);
+	}
+
+	@if ($easing) {
+		@include transitionTimingFunction($easing);
+	}
+}
+
+@mixin transitionDelay($delay) {
+	-webkit-transition-delay: $delay;
+	-moz-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	-ms-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+@mixin transitionDuration($duration) {
+	-webkit-transition-duration: $duration;
+	-moz-transition-duration: $duration;
+	-o-transition-duration: $duration;
+	-ms-transition-duration: $duration;
+	transition-duration: $duration;
+}
+
+@mixin transitionProperty($property) {
+	-webkit-transition-property: $property;
+	-moz-transition-property: $property;
+	-o-transition-property: $property;
+	-ms-transition-property: $property;
+	transition-property: $property;
+}
+
+@mixin transitionTimingFunction($easing) {
+	-webkit-transition-timing-function: $easing;
+	-moz-transition-timing-function: $easing;
+	-o-transition-timing-function: $easing;
+	-ms-transition-timing-function: $easing;
+	transition-timing-function: $easing;
+}
+
+@mixin filter-blur($value) {
+	-webkit-filter: blur($value);
+	-moz-filter: blur($value);
+	-ms-filter: blur($value);
+	-o-filter: blur($value);
+	filter: blur($value);
+}
+
+@mixin overflow-scroll() {
+	overflow-y: hidden;
+	overflow-x: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+		width: 0px;
+	}
+}

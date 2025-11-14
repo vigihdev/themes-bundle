@@ -1,0 +1,53 @@
+.checkbox-outline {
+    .checkbox-outline-container {
+        @include checkboxContainer();
+        @include size($checkbox-width);
+        @include transition($checkbox-transition-background-color);
+        svg.checkbox-icon {
+            @include checkboxsvgIcon;
+            position: absolute;
+            &.checkbox-outline-checked-icon {
+                @include transition($checkbox-transition-transform);
+                @include transform(0);
+            }
+            &.checkbox-outline-unchecked-icon {
+                @include transition($checkbox-transition-fillAndColor);
+                color: #939393;
+            }
+        }
+        input {
+            @include checkboxInput();
+        }
+    }
+    label {
+        @include user-select-none;
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+}
+
+// Checkbox colors
+@each $color, $value in $theme-colors {
+    .checkbox-outline.checkbox-outline-#{$color} {
+        .checkbox-outline-container {
+            @include hover-focus-active {
+                background-color: rgba($value, 0.2);
+            }
+        }
+        &.checked {
+            svg.checkbox-icon {
+                &.checkbox-outline-checked-icon,
+                &.checkbox-outline-unchecked-icon {
+                    @include transform(1);
+                    color: $value;
+                }
+            }
+            label {
+                color: $value;
+            }
+        }
+        &.checkbox-outline-ripple .checkbox-outline-container {
+            background-color: rgba($value, 0.1);
+        }
+    }
+}

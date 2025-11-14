@@ -1,0 +1,34 @@
+$input-width: 55px !default;
+$input-height: 60px !default;
+$input-bg: #fff !default;
+$input-border-color: #c4c4c4 !default;
+
+.input-group-kode-token {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $getter;
+    .form-control-kode-token {
+        background: $input-bg;
+        outline: 0;
+        box-shadow: none;
+        border-radius: 0;
+        text-align: center;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        width: $input-width;
+        height: $input-height;
+        border-bottom: 4px solid $input-border-color;
+        font-size: 1.4rem;
+        color: #000000;
+        font-family: $font-family-roboto-bold;
+        text-transform: capitalize;
+        margin-right: 4px;
+        @include border-radius(4px);
+        @include focus {
+            outline: 0;
+            box-shadow: none;
+            background: $input-bg;
+        }
+    }
+}

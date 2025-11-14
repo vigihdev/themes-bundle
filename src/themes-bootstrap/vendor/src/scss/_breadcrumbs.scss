@@ -1,0 +1,24 @@
+.header-breadcrumb {
+    .header-breadcrumb-wrapper {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        padding-bottom: 8px;
+        .header-breadcrumb-back {
+            position: absolute;
+            left: $getter;
+            .back-link {
+                color: #000000;
+                .material-icons,
+                .material-icons-outlined {
+                    font-size: 28px;
+                }
+            }
+        }
+        .header-breadcrumb-title {
+            font-family: $font-family-roboto-bold;
+            font-size: 1.2em;
+            color: #000000;
+        }
+    }
+}

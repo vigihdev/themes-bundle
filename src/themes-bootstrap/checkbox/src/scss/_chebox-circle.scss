@@ -1,0 +1,60 @@
+.checkbox-circle {
+    .checkbox-circle-container {
+        @include checkboxContainer();
+        @include size($checkbox-width);
+        @include transition($checkbox-transition-background-color);
+        svg.radio-svg-icon {
+            @include checkboxsvgIcon;
+            position: absolute;
+        }
+        input {
+            @include checkboxInput();
+        }
+    }
+    label {
+        @include user-select-none;
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+}
+
+// Checkbox colors
+@each $color, $value in $theme-colors {
+    .checkbox-circle.checkbox-circle-#{$color} {
+        .checkbox-circle-container {
+            @include hover-focus-active {
+                background-color: rgba($value, 0.2);
+            }
+        }
+
+        svg.radio-svg-icon {
+            &.checkbox-#{$color}-checked-icon {
+                @include transition($checkbox-transition-transform);
+                @include transform(0);
+            }
+            &.checkbox-#{$color}-unchecked-icon {
+                @include transition($checkbox-transition-transform);
+                fill: #c8c8c8;
+            }
+        }
+
+        &.checked {
+            svg.radio-svg-icon {
+                &.checkbox-#{$color}-checked-icon {
+                    @include transform(1);
+                    color: $value;
+                    fill: $value;
+                }
+                &.checkbox-#{$color}-unchecked-icon {
+                    fill: $value;
+                }
+            }
+            label {
+                color: $value;
+            }
+        }
+        &.checkbox-circle-ripple .checkbox-circle-container {
+            background-color: rgba($value, 0.1);
+        }
+    }
+}

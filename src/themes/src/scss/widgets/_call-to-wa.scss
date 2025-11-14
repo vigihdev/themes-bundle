@@ -1,0 +1,88 @@
+// Footer Bottom Widget
+$img-size-wa: 50px;
+.call-to-wa-widget {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    .call-to-wa-icon {
+        @include size($img-size-wa);
+        @include border-radius(50%);
+        @include centerFlex;
+        background: #ffffff;
+        margin: 8px;
+        @include BoxShadow(2);
+        .img-wa {
+            width: $img-size-wa;
+        }
+    }
+}
+
+#call-to-wa-popup {
+    max-width: 340px;
+    @include border-radius(8px);
+    filter: drop-shadow-elevation(8);
+    background: $white;
+    margin-right: 8px;
+    position: fixed;
+    bottom: 3px;
+    right: 0px;
+    width: 100%;
+    z-index: 2000;
+    .whatsapp-popup-group {
+        .whatsapp-popup-header {
+            padding: 12px;
+            background: #28a745;
+            @include border-top-radius(8px);
+            position: relative;
+            .whatsapp-popup-header-title {
+                color: $white;
+                @include poppins-regular;
+            }
+            .whatsapp-popup-close {
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 4px;
+                color: #ff6100;
+                font-weight: bold;
+            }
+        }
+
+        .whatsapp-popup-container {
+            .whatsapp-popup-items {
+                display: flex;
+                align-items: center;
+                flex-wrap: nowrap;
+                border-bottom: 1px solid #ececec;
+                padding: 8px;
+                .whatsapp-popup-media {
+                    margin-right: 8px;
+                    position: relative;
+                    .whatsapp-popup-icon {
+                        @include BoxShadow(2);
+                        @include border-radius(4px);
+                        @include size($img-size-wa);
+                    }
+                    .circle-online {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        @include size(12px);
+                        @include border-radius(50%);
+                        @include BoxShadow(2);
+                        background: #28a745;
+                    }
+                }
+                .whatsapp-popup-content {
+                    .username {
+                        @include poppins-bold;
+                    }
+                    .no-hp {
+                        @include poppins-medium;
+                        color: #9b9b9b;
+                    }
+                }
+            }
+        }
+    }
+}

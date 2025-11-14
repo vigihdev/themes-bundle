@@ -1,0 +1,22 @@
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@each $color, $value in $theme-colors {
+    .toast-#{$color} {
+        background-color: $value;
+        color: color-yiq($value);
+        @include BoxShadow(1);
+        border: 0;
+        @include border-radius(8px);
+        .toast-header {
+            @include border-top-radius(8px);
+            background-color: $value;
+            color: color-yiq($value);
+            border-bottom-color: color-darken($value, 10%);
+            .text-muted {
+                color: color-yiq($value) !important;
+            }
+        }
+    }
+}

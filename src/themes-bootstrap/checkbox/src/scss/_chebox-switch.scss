@@ -1,0 +1,97 @@
+.checkbox-switch-group {
+    display: inline-flex;
+    align-items: center;
+    .checkbox-switch {
+        display: inline-flex;
+        width: 58px;
+        height: 38px;
+        overflow: hidden;
+        padding: 12px;
+        box-sizing: border-box;
+        position: relative;
+        flex-shrink: 0;
+        z-index: 0;
+        vertical-align: middle;
+
+        .checkbox-switch-container {
+            @include checkboxContainer();
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+            color: $switch-currentcolor;
+
+            input {
+                @include checkboxInput();
+            }
+
+            .switch-thumb {
+                @include BoxShadow(3);
+                @include transform-translateX(0px);
+                @include transition($checkbox-transition-transform);
+                transition-duration: 140ms;
+                background-color: currentcolor;
+                @include size($switch-thumb-width);
+                border-radius: 50%;
+            }
+        }
+        .switch-thumb-ripple {
+            @include size($switch-thumb-ripple-width);
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .checkbox-switch-track {
+            height: 100%;
+            width: 100%;
+            border-radius: 7px;
+            z-index: -1;
+            @include transition($checkbox-transition-background-color);
+            background-color: #939393;
+            opacity: 0.6;
+            @include BoxShadow(1);
+        }
+
+        &.checked {
+            .checkbox-switch-container {
+                .switch-thumb,
+                .switch-thumb-ripple {
+                    @include transform-translateX(20px);
+                }
+            }
+        }
+    }
+    label {
+        @include user-select-none;
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+}
+
+// switch colors
+@each $color, $value in $theme-colors {
+    .checkbox-switch.checkbox-switch-#{$color} {
+        &.checked {
+            .checkbox-switch-track {
+                background-color: $value;
+            }
+            .checkbox-switch-container {
+                .switch-thumb {
+                    background-color: $value;
+                }
+            }
+        }
+        &.switch-ripple {
+            .checkbox-switch-container {
+                .switch-thumb-ripple {
+                    background: rgba($value, 0.2);
+                }
+            }
+        }
+        @include hover-focus-active {
+            .switch-thumb {
+                box-shadow: rgba($value, 0.2) $switch-shadow;
+            }
+        }
+    }
+}

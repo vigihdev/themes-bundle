@@ -1,0 +1,47 @@
+// <reference path="/parts/navbar-menu.php"/>
+
+.container-navbar-menu {
+    background: #fff;
+    @include BoxShadow(3);
+    @include border-radius(8px);
+    nav.navbar {
+        padding-left: 0;
+        padding-right: 0;
+        .navbar-brand {
+            img {
+                max-width: 160px;
+                object-fit: contain;
+                aspect-ratio: 1 auto;
+                width: 100%;
+            }
+        }
+        .navbar-collapse .navbar-nav .nav-item .nav-link {
+            color: $black;
+            @include poppins-bold;
+        }
+        .navbar-collapse.collapse:not(.show) {
+            .navbar-nav {
+                .nav-item {
+                    padding: 0 9px;
+                    @include transition(all 0.2s ease-in-out);
+                    @include hover {
+                        background: #cc0000;
+                        @include border-radius(8px);
+                        .nav-link {
+                            color: $white;
+                        }
+                    }
+                    .nav-link {
+                    }
+                }
+            }
+        }
+
+        .navbar-collapse.collapse.show .navbar-nav .nav-item {
+            border-bottom: 1px solid #eee;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

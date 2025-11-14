@@ -1,0 +1,9 @@
+$font-uri: "../twentyten/dist/fonts/roboto/";
+
+@include font-face("Roboto Thin", $font-uri + "Roboto-Thin-webfont", 100, normal);
+@include font-face("Roboto Light", $font-uri + "Roboto-Light-webfont", 300, normal);
+@include font-face("Roboto", $font-uri + "Roboto-Regular-webfont", 400, normal);
+@include font-face("Roboto Regular", $font-uri + "Roboto-Regular-webfont", 400, normal);
+@include font-face("Roboto Medium", $font-uri + "Roboto-Medium-webfont", 500, normal);
+@include font-face("Roboto Bold", $font-uri + "Roboto-Bold-webfont", 700, normal);
+@include font-face("Roboto Black", $font-uri + "Roboto-Black-webfont", 900, normal);

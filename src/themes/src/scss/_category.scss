@@ -1,0 +1,40 @@
+// category.scss
+
+.col-category {
+    .page-title.category {
+        padding: $getter;
+    }
+    .post {
+        padding: $getter;
+        margin-bottom: $getter;
+        background-color: #fff;
+        @include BoxShadow(2);
+        @include border-radius(8px);
+
+        .entry-title,
+        .entry-meta,
+        .entry-summary,
+        .entry-utility {
+            margin-bottom: 8px;
+        }
+
+        .entry-title {
+            .text-link {
+                color: #424242;
+                @include poppins-bold;
+                @include transitions(color, 0.3s);
+            }
+            @include hover {
+                .text-link {
+                    color: $primary;
+                }
+            }
+        }
+        .entry-meta {
+        }
+        .entry-summary {
+        }
+        .entry-utility {
+        }
+    }
+}

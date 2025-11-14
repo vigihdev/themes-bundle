@@ -1,0 +1,26 @@
+@mixin font-face-source-sans-pro($name, $weight: null, $style: normal, $ext: ttf) {
+    $fontName: "Source Sans Pro";
+    $fontPath: "../fonts/sourcesanspro/SourceSansPro-" + $name + "." + $ext;
+
+    @font-face {
+        font-family: $fontName;
+        font-style: $style;
+        @if type-of($weight) != "null" {
+            font-weight: $weight;
+        }
+        src: url($fontPath), format("truetype"), local($fontPath), format("truetype");
+    }
+}
+
+$fontSourcesanspro: (
+    "Light": 100,
+    "ExtraLight": 300,
+    "Regular": 400,
+    "Bold": 700,
+    "SemiBold": 500,
+    "Black": 900
+);
+
+@each $name, $weight in $fontSourcesanspro {
+    @include font-face-source-sans-pro($name, $weight);
+}

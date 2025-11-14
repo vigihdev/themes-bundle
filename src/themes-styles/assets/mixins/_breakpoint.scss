@@ -1,0 +1,40 @@
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+// >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+
+@mixin media-screen-min-max($min, $max, $breakpoints: $grid-breakpoints) {
+    $maxs: map-get($breakpoints, $max);
+    $mins: map-get($breakpoints, $min);
+
+    @if $maxs and $mins {
+        @media (min-width: $mins) and (max-width: $maxs) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin media-screen-min($min, $breakpoints: $grid-breakpoints) {
+    $mins: map-get($breakpoints, $min);
+
+    @if $mins {
+        @media (min-width: $mins) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin media-screen-max($max, $breakpoints: $grid-breakpoints) {
+    $maxs: map-get($breakpoints, $max);
+
+    @if $maxs {
+        @media (max-width: $maxs) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}

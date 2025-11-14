@@ -1,0 +1,39 @@
+.alert-toasts {
+    .alert-toasts-top {
+    }
+
+    .alert-toasts-top-left {
+    }
+
+    .alert-toasts-top-right {
+    }
+
+    .alert-toasts-top-center {
+    }
+
+    .alert-toasts-bottom-left {
+    }
+
+    .alert-toasts-bottom-right {
+    }
+
+    .alert-toasts-bottom-center {
+    }
+
+    .alert-toasts-bottom {
+    }
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@each $color, $value in $theme-colors {
+    .alert-toasts-#{$color} {
+        background-color: $value;
+        color: color-yiq($value);
+        @include BoxShadow(1);
+        border: 0;
+        @include border-radius(8px);
+    }
+}

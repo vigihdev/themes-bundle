@@ -1,0 +1,16 @@
+.form-group.form-group-basic {
+    .form-control {
+        @include transitions(border-width, 0.2s);
+        border: 1px solid $primary;
+        @include focus {
+            background-color: transparent;
+            outline: 0;
+            box-shadow: none;
+            border: 2px solid $primary;
+        }
+
+        &::placeholder {
+            color: #bfbfbf;
+        }
+    }
+}

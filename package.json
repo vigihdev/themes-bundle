@@ -1,0 +1,50 @@
+{
+    "name": "@vigihdev/themes-bundle",
+    "version": "0.1.0-dev",
+    "description": "Toolkit untuk memproses themes, styles, dan komponen berbasis Grunt",
+    "main": "index.js",
+    "author": "vigihdev",
+    "license": "MIT",
+    "keywords": [
+        "themes",
+        "styles",
+        "bootstrap",
+        "grunt",
+        "build-tools",
+        "vigihdev"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vigihdev/themes-bundle.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vigihdev/themes-bundle/issues"
+    },
+    "homepage": "https://github.com/vigihdev/themes-bundle",
+    "bin": {
+        "themes-bundle-grunt": "./src/process/scripts/themes-bundle-grunt.js"
+    },
+    "scripts": {
+        "dev": "nodemon dev.js",
+        "grunt": "node ./src/process/scripts/themes-bundle-grunt.js",
+        "themes_bundle:test": "npm run grunt -- themes_bundle:test",
+        "grunt:themes": "npm run grunt -- themes",
+        "grunt:themes:dist": "npm run grunt -- themes:dist",
+        "grunt:themes:build": "npm run grunt -- themes:build",
+        "grunt:themes:clean": "npm run grunt -- themes:clean",
+        "grunt:themes:fresh": "npm run grunt -- themes:fresh",
+        "grunt:styles": "npm run grunt -- themes_styles",
+        "grunt:styles:dist": "npm run grunt -- themes_styles:dist",
+        "grunt:styles:clean": "npm run grunt -- themes_styles:clean",
+        "grunt:styles:fresh": "npm run grunt -- themes_styles:fresh",
+        "grunt:styles:build": "npm run grunt -- themes_styles:build",
+        "grunt:components": "npm run grunt -- themes_components",
+        "grunt:components:dist": "npm run grunt -- themes_components:dist",
+        "grunt:components:clean": "npm run grunt -- themes_components:clean",
+        "grunt:components:build": "npm run grunt -- themes_components:build",
+        "grunt:themes-bs": "npm run grunt -- themes_bootstrap",
+        "grunt:themes-bs:dist": "npm run grunt -- themes_bootstrap:dist",
+        "grunt:themes-bs:build": "npm run grunt -- themes_bootstrap:build",
+        "grunt:themes-bs:clean": "npm run grunt -- themes_bootstrap:clean"
+    }
+}

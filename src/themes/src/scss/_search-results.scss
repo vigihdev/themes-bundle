@@ -1,0 +1,32 @@
+// search-results.scss
+
+// search-results.scss
+
+.col-search-results {
+    .page-title.search-results {
+        padding: $getter;
+    }
+    .hentry {
+        padding: $getter;
+        margin-bottom: $getter;
+        background-color: #fff;
+        @include BoxShadow(2);
+        @include border-radius(8px);
+
+        .entry-title,
+        .entry-meta,
+        .entry-summary,
+        .entry-utility {
+            margin-bottom: 8px;
+        }
+
+        .entry-title {
+        }
+        .entry-meta {
+        }
+        .entry-summary {
+        }
+        .entry-utility {
+        }
+    }
+}

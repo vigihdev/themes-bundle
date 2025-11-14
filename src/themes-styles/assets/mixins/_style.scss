@@ -1,0 +1,198 @@
+@function color-lighten($color, $lighten: 10%) {
+	@return lighten($color, $lighten);
+}
+
+@function color-darken($color, $darken: 50%) {
+	@return darken($color, $darken);
+}
+
+@function color-saturate($color, $saturate: 10%) {
+	@return saturate($color, $saturate);
+}
+
+@function color-desaturate($color, $desaturate: 10%) {
+	@return desaturate($color, $desaturate);
+}
+
+@mixin user-select-none() {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none !important; /* iOS Safari */
+	-webkit-user-select: none !important; /* Safari */
+	-khtml-user-select: none !important; /* Konqueror HTML */
+	-moz-user-select: none !important; /* Firefox */
+	-ms-user-select: none !important; /* Internet Explorer/Edge */
+	user-select: none !important; /* Non-prefixed version, currently supported by Chrome and Opera */
+	&::selection {
+		background: transparent;
+	}
+	&::-moz-selection {
+		background: transparent;
+	}
+}
+
+@mixin hiddenScroll {
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+		display: none;
+	}
+}
+
+@mixin before {
+	&:before {
+		@content;
+	}
+}
+
+@mixin active {
+	&:active {
+		@content;
+	}
+}
+
+@mixin after {
+	&:after {
+		@content;
+	}
+}
+
+@mixin last {
+	&:last-of-type {
+		@content;
+	}
+}
+
+@mixin last-child {
+	&:last-child {
+		@content;
+	}
+}
+
+@mixin absoluteCenterXY() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform-translate(-50%, -50%);
+}
+
+@mixin absoluteCenterY() {
+	position: absolute;
+	top: 50%;
+	@include transform-translateY(-50%);
+}
+
+@mixin absoluteCenterX() {
+	position: absolute;
+	left: 50%;
+	@include transform-translateX(-50%);
+}
+
+@mixin centerVertical() {
+	margin: auto;
+	position: relative;
+	top: 50%;
+	@include transform-translateY(-50%);
+}
+
+@mixin centerXY() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform-translate(-50%, -50%);
+}
+
+@mixin centerXX() {
+	left: 50%;
+	@include transform-translateX(-50%);
+}
+
+@mixin centerYY() {
+	top: 50%;
+	@include transform-translateY(-50%);
+}
+
+@mixin centerY() {
+	position: absolute;
+	top: 50%;
+	@include transform-translateY(-50%);
+}
+
+@mixin centerFlex() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+@mixin center0Flex() {
+	display: flex;
+	align-items: center;
+	align-content: center;
+}
+
+@mixin centerBetween() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin flexwrap() {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@mixin flexcolum() {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flexend() {
+	display: flex;
+	justify-content: end;
+}
+
+@mixin reset-getterY() {
+}
+
+@mixin reset-getterX() {
+	margin-right: -($getter);
+	margin-left: -($getter);
+}
+
+@mixin getterMin($names...) {
+	@each $name in $names {
+		margin-#{$name}: $getter-padding;
+	}
+}
+
+@mixin stepMarginMin($names...) {
+	@each $name in $names {
+		margin-#{$name}: -$getter-padding;
+	}
+}
+
+@mixin block0() {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+@mixin backdrop() {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1040;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	opacity: 0.5;
+}
+
+@mixin reset-row-padding() {
+	padding-right: 0;
+	padding-left: 0;
+}

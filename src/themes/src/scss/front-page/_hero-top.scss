@@ -1,0 +1,67 @@
+// <reference path="/front-page/hero-top.php"/>
+
+.hero-top {
+    .row.row-hero-top {
+        background-color: $primary; /* For browsers that do not support gradients */
+        background-image: linear-gradient($primary, $primary 40%, $white 85%);
+        @include BoxShadow(2);
+        @include border-bottom-radius(8px);
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+
+        .hero-text-group {
+            padding: 16px;
+            .hero-text-title,
+            .hero-text-description,
+            .hero-button-action {
+                text-align: center;
+                color: #fff;
+                margin-bottom: 16px;
+            }
+            .hero-text-title {
+                @include poppins-bold;
+                font-size: 2em;
+            }
+            .hero-text-description {
+                @include poppins-semibold;
+                margin-bottom: 32px;
+            }
+            .hero-button-action {
+            }
+        }
+
+        .col-slider {
+            margin-bottom: 32px;
+            padding-top: 12px;
+            .hero-slider-owl-carousel {
+                padding-bottom: 80px;
+                .item-media {
+                    @include BoxShadow(2);
+                    @include border-radius(8px);
+                    flex: 0 0 auto;
+                    margin-right: 10px;
+                    .img-media {
+                        object-fit: contain;
+                        @include BoxShadow(2);
+                        @include border-radius(8px);
+                        aspect-ratio: 1 auto;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .col-form-api-order {
+            .container.container-form-api-order {
+                .row.form-api-order {
+                    .col-button-action {
+                        display: flex;
+                        padding-top: $getter;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}

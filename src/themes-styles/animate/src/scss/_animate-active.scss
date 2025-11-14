@@ -1,0 +1,71 @@
+$selector_animate: "animate__";
+
+.animate__animated {
+    @include animate;
+}
+
+.#{$selector_animate}fadeIn {
+    @include keyframes-fadeIn;
+    @include fadeIn;
+}
+
+.#{$selector_animate}fadeInDown {
+    @include keyframes-fadeInDown;
+    @include fadeInDown;
+}
+.#{$selector_animate}fadeInDownBig {
+    @include keyframes-fadeInDownBig;
+    @include fadeInDownBig;
+}
+.#{$selector_animate}fadeInLeft {
+    @include keyframes-fadeInLeft;
+    @include fadeInLeft;
+}
+.#{$selector_animate}fadeInLeftBig {
+    @include keyframes-fadeInLeftBig;
+    @include fadeInLeftBig;
+}
+.#{$selector_animate}fadeInRight {
+    @include keyframes-fadeInRight;
+    @include fadeInRight;
+}
+.#{$selector_animate}fadeInRightBig {
+    @include keyframes-fadeInRightBig;
+    @include fadeInRightBig;
+}
+.#{$selector_animate}fadeInUp {
+    @include keyframes-fadeInUp;
+    @include fadeInUp;
+}
+.#{$selector_animate}fadeInUpBig {
+    @include keyframes-fadeInUpBig;
+    @include fadeInUpBig;
+}
+
+// slide
+.#{$selector_animate}slideInDown {
+    @include keyframes-slideInDown;
+    @include slideInDown;
+}
+.#{$selector_animate}slideInLeft {
+    @include keyframes-slideInLeft;
+    @include slideInLeft;
+}
+.#{$selector_animate}slideInRight {
+    @include keyframes-slideInRight;
+    @include slideInRight;
+}
+.#{$selector_animate}slideInUp {
+    @include keyframes-slideInUp;
+    @include slideInUp;
+}
+
+// Zoopm
+.#{$selector_animate}zoomIn {
+    @include keyframes-zoomIn;
+    @include zoomIn;
+}
+
+.animate__animated-infinite {
+    @include animate-infinite;
+}

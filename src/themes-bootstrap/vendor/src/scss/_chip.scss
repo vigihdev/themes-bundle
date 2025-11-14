@@ -1,0 +1,56 @@
+.chip {
+    border-radius: 1rem;
+    box-sizing: border-box;
+    line-height: 34px;
+    padding: 0 0.5rem 0 0.75rem;
+    text-transform: capitalize;
+    background: #e0e0e0;
+    color: rgba(0, 0, 0, 0.87);
+    display: inline-block;
+    cursor: default;
+    text-transform: capitalize;
+
+    .chip-action {
+        display: inline-flex;
+        vertical-align: middle;
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.87);
+        background-color: #adadad;
+        border-radius: 50%;
+        padding: 1px 2px 2px 2px;
+        margin-left: 5px;
+        .material-icons,
+        .material-icons-outlined {
+            font-size: 18px;
+        }
+    }
+    &.chip-contact {
+        padding-left: 0;
+        img {
+            margin-right: 5px;
+            width: 2.25rem;
+            margin-top: -3px;
+            border-radius: 50%;
+        }
+        .material-icons,
+        .material-icons-outlined {
+        }
+    }
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the .chip.
+
+@each $color, $value in $theme-colors {
+    .chip-#{$color} {
+        background-color: $value;
+        color: color-yiq($value);
+        .chip-action {
+            background-color: color-lighten($value);
+            .material-icons,
+            .material-icons-outlined {
+            }
+        }
+    }
+}
